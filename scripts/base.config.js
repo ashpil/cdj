@@ -1,13 +1,14 @@
 import svelte from 'rollup-plugin-svelte-hot';
-import Hmr from 'rollup-plugin-hot'
+import Hmr from 'rollup-plugin-hot';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-import copy from 'rollup-plugin-copy'
-import del from 'del'
+import copy from 'rollup-plugin-copy';
+import del from 'del';
 import replace from '@rollup/plugin-replace';
-import { spassr } from 'spassr'
+import { spassr } from 'spassr';
+import smartAsset from "rollup-plugin-smart-asset";
 
 const isNollup = !!process.env.NOLLUP
 
@@ -70,6 +71,11 @@ function baseConfig(config, ctx) {
                 ],
                 copyOnce: true,
                 flatten: false
+            }),
+            smartAsset({
+                url: "copy",
+                assetsPath: "images",
+                publicPath: "/build/images/",
             }),
             svelte(svelteConfig),
 
