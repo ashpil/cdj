@@ -1,23 +1,12 @@
 <script>
-  import { slide } from "svelte/transition";
-  import { quintInOut } from "svelte/easing";
+  import { slide } from 'svelte/transition';
+  import { quintInOut } from 'svelte/easing';
 
   export let county;
   export let onClose;
 </script>
 
 <style>
-.modal-overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: #333;
-    opacity: 0.5;
-    z-index: 5;
-  }
-
   .container {
     position: fixed;
     z-index: 10;
@@ -72,26 +61,6 @@
     height: 32px;
     padding: 0;
     background: #f5f5f5;
-  }
-
-  .header-title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .header-title > h1 {
-    margin: 0;
-    font-size: 1.4em;
-  }
-
-  .body-players {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .body-players > h2 {
-    font-size: 1.2em;
   }
 </style>
 

@@ -1,19 +1,20 @@
 <script>
-    import { metatags } from '@roxi/routify'
-    metatags.title = 'About Us'
-    metatags.description = 'Description coming soon...'
+    import { metatags } from '@roxi/routify';
 
-    let content = "Hello there!";
-    let red = "red";
+    metatags.title = 'About Us';
+    metatags.description = 'Description coming soon...';
+
+    let content = 'Hello there!';
+    let red = 'red';
 
     function handleMouseOver() {
-        content = "General Kenobi!";
-        red = "blue";
+      content = 'General Kenobi!';
+      red = 'blue';
     }
 
     function handleMouseOut() {
-        content = "Hello there!";
-        red = "red";
+      content = 'Hello there!';
+      red = 'red';
     }
 </script>
 
