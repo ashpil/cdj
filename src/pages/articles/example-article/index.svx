@@ -5,11 +5,11 @@ title: Some article!
 <!-- I mostly based this off of https://dev.to/pjaerr/lets-create-a-data-visualization-using-svelte-4m6p -->
 
 <script>
-  import CountyInformation from "./components/CountyInformation.svelte";
-  import MapContainer from "./components/MapContainer.svelte"
-  import MapRegion from "./components/MapRegion.svelte"
-  import regions from "./data/regions.js"
-  import data from "./data/data";
+  import CountyInformation from './components/CountyInformation.svelte';
+  import MapContainer from './components/MapContainer.svelte';
+  import MapRegion from './components/MapRegion.svelte';
+  import regions from './data/regions.js';
+  import data from './data/data';
   import cornell from './images/cornell.jpg';
 
   let activeRegion;
@@ -22,17 +22,17 @@ title: Some article!
   
   function getCountyData(countyName) {
     return data
-          .filter(county => county[8] === countyName)
-          .map(county => {
-              return {
-                  color: colourPalette[county[12][4]],
-                  ...county
-              }
-          })
-      [0];
+      .filter(county => county[8] === countyName)
+      .map(county => {
+        return {
+          color: colourPalette[county[12][4]],
+          ...county
+        }
+      })
+    [0];
   };
-
 </script>
+
 <style>
     pre {
         background-color: beige;

@@ -1,7 +1,8 @@
 <script>
-    import { metatags } from '@roxi/routify'
-    metatags.title = 'cdj'
-    metatags.description = 'Description coming soon...'
+    import { metatags } from '@roxi/routify';
+
+    metatags.title = 'cdj';
+    metatags.description = 'Description coming soon...';
 </script>
 
 <h2>Welcome</h2>
