@@ -5,12 +5,12 @@ title: Some article!
 <!-- I mostly based this off of https://dev.to/pjaerr/lets-create-a-data-visualization-using-svelte-4m6p -->
 
 <script>
-  import CountyInformation from './components/CountyInformation.svelte';
-  import MapContainer from './components/MapContainer.svelte';
-  import MapRegion from './components/MapRegion.svelte';
-  import regions from './data/regions.js';
-  import data from './data/data';
-  import cornell from './images/cornell.jpg';
+  import CountyInformation from './_components/CountyInformation.svelte';
+  import MapContainer from './_components/MapContainer.svelte';
+  import MapRegion from './_components/MapRegion.svelte';
+  import regions from './_data/regions.js';
+  import data from './_data/data';
+  import cornell from './_images/cornell.jpg';
 
   let activeRegion;
 
