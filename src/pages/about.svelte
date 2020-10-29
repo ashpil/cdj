@@ -1,5 +1,6 @@
 <script>
     import { metatags } from '@roxi/routify';
+    import Nav from './_components/Nav.svelte';
 
     metatags.title = 'About Us';
     metatags.description = 'Description coming soon...';
@@ -17,6 +18,8 @@
       red = 'red';
     }
 </script>
+
+<Nav/>
 
 <svg height="100" width="100">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill={red}

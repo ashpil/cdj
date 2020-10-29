@@ -1,5 +1,7 @@
 ---
 title: Some article!
+description: Some description.
+image: image
 ---
 
 <!-- I mostly based this off of https://dev.to/pjaerr/lets-create-a-data-visualization-using-svelte-4m6p -->
