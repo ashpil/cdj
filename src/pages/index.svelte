@@ -6,11 +6,11 @@
     metatags.description = 'Description coming soon...';
 
     const posts = $layout.parent.children
-    .filter((entry) => entry.path === '/articles')[0].children
-    .map((file) => ({
-        ...file.children.find((x) => x.__file.file === 'index.svx').meta.frontmatter,
-        slug: file.path,
-    }));
+        .filter((entry) => entry.path === '/articles')[0].children
+        .map((file) => ({
+            ...file.children.find((x) => x.__file.file === 'index.svx').meta.frontmatter,
+            slug: file.path,
+        }));
 </script>
 
 <Intro/>
