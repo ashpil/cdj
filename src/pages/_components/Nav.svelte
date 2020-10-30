@@ -11,7 +11,7 @@
 </style>
 
 <nav>
-    <a>About</a>
-    <a>Get Involved</a>
-    <a>Learn</a>
+    <a href="/about">About</a>
+    <a href="/get_involved">Get Involved</a>
+    <a href="/learn">Learn</a>
 </nav>
