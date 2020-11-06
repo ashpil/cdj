@@ -2,7 +2,7 @@
     import { metatags, layout } from '@roxi/routify';
     import Intro from './_components/Intro.svelte';
 
-    metatags.title = 'cdj';
+    metatags.title = 'Cornell Data Journal';
     metatags.description = 'Description coming soon...';
 
     const posts = $layout.parent.children
