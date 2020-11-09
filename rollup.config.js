@@ -18,7 +18,10 @@ export const config = {
       mdsvex(),
       autoPreprocess({
         postcss: { plugins: [postcssImport()] },
-        defaults: { style: 'postcss' }
+        defaults: { style: 'scss' },
+        scss: {
+          prependData: `@import 'static/styles/variables.scss';`
+        }
       })]
   },
   swWrapper: worker => worker,

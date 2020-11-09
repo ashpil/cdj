@@ -3,7 +3,7 @@
   export let svgPath;
 </script>
 
-<style lang="scss">
+<style>
   .path {
     transition: fill 0.5s ease;
       &:hover {

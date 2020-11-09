@@ -1,4 +1,4 @@
-<style lang='scss'>
+<style>
     nav {
         display: grid;
         grid-template-columns: auto auto auto;
