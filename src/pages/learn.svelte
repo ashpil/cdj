@@ -4,7 +4,6 @@
 
     metatags.title = 'Learn';
     metatags.description = 'Description coming soon...';
-
 </script>
 
 <Nav/>

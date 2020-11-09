@@ -3,6 +3,5 @@
 
     metatags.title = 'About Us';
     metatags.description = 'Description coming soon...';
-
 </script>
 

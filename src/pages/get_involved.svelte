@@ -4,7 +4,6 @@
 
     metatags.title = 'Get Involved';
     metatags.description = 'Description coming soon...';
-
 </script>
 
 <Nav/>

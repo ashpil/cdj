@@ -14,7 +14,7 @@ module.exports = {
     'no-underscore-dangle': 0,
   },
   settings: {
-    'svelte3/ignore-styles': (t => "lang" in t),
+    'svelte3/ignore-styles': (t => true),
   },
   plugins: [
     'svelte3'
@@ -29,7 +29,8 @@ module.exports = {
         'import/first': 'off',
         'import/no-duplicates': 'off',
         'import/no-mutable-exports': 'off',
-        'import/no-unresolved': 'off'
+        'import/no-unresolved': 'off',
+        'import/prefer-default-export': 'off'
       }
     }
   ]

@@ -31,9 +31,13 @@
   <h2><a href={article.slug}>{article.title}</a></h2>
   <p>{article.description}</p>
   <a class="preview" href={article.slug}>
-    {#await article.component then cmp}
-      <svelte:component this={cmp} preview={true} />
+    {#await article.component}
+      <p>...loading</p>
+    {:then component}
+      <svelte:component this={component} preview={true} />
+    {:catch error}
+      <p style="color: red">{error.message}</p>
     {/await}
-  <a>
+  </a>
 </div>
 
