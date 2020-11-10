@@ -1,5 +1,14 @@
 <script>
+  import { onMount } from 'svelte';
+  import { ready } from '@roxi/routify';
   export let article;
+
+  let component;
+
+  onMount(async () => {
+    component = await article.component;
+    $ready();
+  });
 </script>
 
 <style>
@@ -31,13 +40,7 @@
   <h2><a href={article.slug}>{article.title}</a></h2>
   <p>{article.description}</p>
   <a class="preview" href={article.slug}>
-    {#await article.component}
-      <p>...loading</p>
-    {:then component}
       <svelte:component this={component} preview={true} />
-    {:catch error}
-      <p style="color: red">{error.message}</p>
-    {/await}
   </a>
 </div>
 
