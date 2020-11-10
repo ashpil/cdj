@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { ready } from '@roxi/routify';
+
   export let article;
 
   let component;
