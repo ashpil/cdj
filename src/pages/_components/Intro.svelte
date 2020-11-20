@@ -3,26 +3,37 @@
 </script>
 
 <style>
-    #intro {
-      #intro-inner {
-        max-width: $max-width;
-        margin: 0 auto;
-        #intro-top {
-            display: flex;
-            justify-content: space-between;
-        }
+  #intro {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    justify-items: end;
+    margin: 3rem 0;
+
+    #intro-desc {
+      h1 {
+        margin: 0 0 0.5rem 0;
       }
-      margin-bottom: 3rem;
+      h3 {
+        font-size: 18px;
+        margin: 0;
+      }
     }
+  }
+
+  @media only screen and (max-width: $mobile-cutoff) {
+    #intro {
+      grid-template-columns: initial;
+      justify-items: stretch;
+      margin-bottom: 1rem;
+    }
+  }
 </style>
 
 <div id="intro">
-  <div id="intro-inner">
-    <div id="intro-top">
-      <h1>Cornell Data Journal</h1>
-      <Nav/>
-    </div>
-    <h3>a digital magazine offering data-driven perspectives on current events, academic, politics, and beyond. </h3>
+  <div id="intro-desc">
+    <h1>cornell data journal</h1>
+    <h3>a digital magazine offering data-driven perspectives on current events, academics, politics, and beyond.</h3>
   </div>
+  <Nav/>
 </div>
 

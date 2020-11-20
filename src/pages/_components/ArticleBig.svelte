@@ -15,21 +15,19 @@
 <style>
   .article {
     display: grid;
-    grid:
-      "title preview" min-content
-      "desc preview" 1fr
-      / 1fr 2fr;
-    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-gap: 2rem;
 
-    h2 {
-      grid-area: title;
-      margin: 0;
+    .description {
+      h2 {
+        margin: 0;
+      }
+      p {
+        font-size: 18px;
+      }
     }
-    p {
-      grid-area: desc;
-    }
+
     .preview {
-      grid-area: preview;
       padding: 1rem;
       border: 1px solid grey;
     }
@@ -38,10 +36,12 @@
 </style>
 
 <div class="article">
-  <h2><a href={article.slug}>{article.title}</a></h2>
-  <p>{article.description}</p>
+  <div class="description">
+    <h2><a href={article.slug}>{article.title}</a></h2>
+    <p>{article.description}</p>
+  </div>
   <a class="preview" href={article.slug}>
-      <svelte:component this={component} preview={true} />
+    <svelte:component this={component} preview={true} />
   </a>
 </div>
 

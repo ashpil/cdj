@@ -1,5 +1,5 @@
 ---
-title: Some article!
+title: Some article with a rather long and interesting title!
 description: Here's a cool preview of an article, with a map of NY! Click here to read more about it. Sort of neat, isn't it?
 ---
 

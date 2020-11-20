@@ -16,10 +16,7 @@
 </script>
 
 <Intro/>
-
-<main>
-  {#each articles as article}
-    <ArticleBig {article} />
-  {/each}
-</main>
+{#each articles as article}
+  <ArticleBig {article} />
+{/each}
 

@@ -5,22 +5,30 @@
 
 <style global>
   body {
-      margin: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
   }
 
   a {
-      color: rgb(0,100,200);
-      text-decoration: none;
+    color: $blue;
+    text-decoration: none;
   }
 
   a:hover {
-      text-decoration: underline;
+    text-decoration: underline;
   }
 
   img {
     max-width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 24px;
   }
 </style>
 
