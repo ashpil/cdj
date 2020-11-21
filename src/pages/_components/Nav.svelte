@@ -5,10 +5,9 @@
     place-items: center;
 
     a {
-      padding: 0.5rem;
-      margin: 0.5rem 0;
+      padding: 1rem;
       color: $purple;
-      font-family: 'Lexend Deca';
+      font-family: $font-secondary;
       font-weight: 900;
     }
   }
