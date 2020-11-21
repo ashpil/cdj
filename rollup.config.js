@@ -17,10 +17,15 @@ export const config = {
     svelte.preprocess = [
       mdsvex(),
       autoPreprocess({
-        postcss: { plugins: [postcssImport()] },
+        postcss: {
+          plugins: [
+            postcssImport(),
+          ],
+        },
         defaults: { style: 'scss' },
         scss: {
-          prependData: `@import 'static/styles/variables.scss';`
+          prependData: "@import 'static/styles/variables.scss';",
+          includePaths: ["static/styles", "node_modules"],
         }
       })]
   },

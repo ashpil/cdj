@@ -8,6 +8,8 @@
       padding: 0.5rem;
       margin: 0.5rem 0;
       color: $purple;
+      font-family: 'Lexend Deca';
+      font-weight: 900;
     }
   }
 </style>

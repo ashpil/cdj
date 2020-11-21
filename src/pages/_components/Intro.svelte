@@ -5,16 +5,17 @@
 <style>
   #intro {
     display: grid;
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 2fr 1fr;
     justify-items: end;
     margin: 3rem 0;
 
     #intro-desc {
       h1 {
-        margin: 0 0 0.5rem 0;
+        margin: 0 0 1rem 0;
       }
       h3 {
-        font-size: 18px;
+        font-size: 22px;
+        font-weight: 200;
         margin: 0;
       }
     }

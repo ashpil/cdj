@@ -21,15 +21,28 @@
     .description {
       h2 {
         margin: 0;
+        font-size: 28px;
       }
       p {
-        font-size: 18px;
+        font-size: 20px;
+        margin: 0.5rem 0;
       }
     }
 
     .preview {
       padding: 1rem;
-      border: 1px solid grey;
+      border: 1px solid $gray;
+      position: relative;
+      background-color: white;
+      .highlight {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $yellow;
+        left: 10px;
+        top: 10px;
+        z-index: -1;
+      }
     }
   }
 
@@ -42,6 +55,7 @@
   </div>
   <a class="preview" href={article.slug}>
     <svelte:component this={component} preview={true} />
+    <div class="highlight"></div>
   </a>
 </div>
 

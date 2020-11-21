@@ -1,6 +1,6 @@
 ---
-title: Some article with a rather long and interesting title!
-description: Here's a cool preview of an article, with a map of NY! Click here to read more about it. Sort of neat, isn't it?
+title: Here's Ten Things That at One Point Were a Long Article Title
+description: The amazing story of how your web developer keeps running out of stand-in words and isn't lame enough to just lorem-ipsum it.
 ---
 
 <!-- I mostly based this off of https://dev.to/pjaerr/lets-create-a-data-visualization-using-svelte-4m6p -->
