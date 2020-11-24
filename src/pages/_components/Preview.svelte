@@ -1,8 +1,10 @@
 <script>
+  import { getContext } from 'svelte';
+
   export let component;
   export let slug;
-
 </script>
+
 <style>
   .preview {
     display: block;
@@ -27,7 +29,10 @@
 </style>
 
 <a class="preview" href={slug}>
-  <svelte:component this={component} preview={true} />
+  {#await component then cmp}
+    <svelte:component this={cmp} preview={true} />
+    {getContext('ready')() || ""}
+  {/await}
   <div class="highlight"></div>
 </a>
 

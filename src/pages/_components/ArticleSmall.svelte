@@ -6,9 +6,7 @@
 
   let component;
 
-  (async () => {
-    component = await article.component;
-  })();
+  component = article.component;
 
 </script>
 

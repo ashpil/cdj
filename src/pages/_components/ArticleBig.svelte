@@ -6,10 +6,7 @@
 
   let component;
 
-  (async () => {
-    component = await article.component;
-    $ready();
-  })();
+  component = article.component;
 </script>
 
 <style>

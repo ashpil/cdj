@@ -1,5 +1,6 @@
 <script>
-    import { metatags, layout } from '@roxi/routify';
+    import { metatags, layout, ready } from '@roxi/routify';
+    import { setContext } from 'svelte';
     import Intro from './_components/Intro.svelte';
     import ArticleBig from './_components/ArticleBig.svelte';
     import ArticleSmall from './_components/ArticleSmall.svelte';
@@ -14,6 +15,11 @@
         component: post.children.find(child => child.title === 'Preview_').component,
         ...post.__file.children.find(child => child.file === 'index.svx').meta.frontmatter,
       }));
+
+        
+    let componentsReady = 0
+    setContext('ready', () => componentsReady++ )
+    $: if(componentsReady === articles.length) {$ready();}
 </script>
 
 <style>
