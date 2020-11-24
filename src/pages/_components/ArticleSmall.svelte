@@ -8,24 +8,21 @@
 
   (async () => {
     component = await article.component;
-    $ready();
   })();
+
 </script>
 
 <style>
   .article {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    grid-gap: 2rem;
-    margin: 3rem 0;
-
     .description {
+      margin: 2rem 0;
       h2 {
         margin: 0;
-        font-size: 28px;
+        font-size: 24px;
       }
+
       p {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0.5rem 0;
       }
     }

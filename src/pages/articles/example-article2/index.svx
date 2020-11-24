@@ -1,6 +1,5 @@
 ---
-featured: true
-title: Here's Ten Things That at One Point Were a Long Article Title
+title: Here's 14 Things That at Somehow Can't Be Like They Are Don't Been
 description: The amazing story of how your web developer keeps running out of stand-in words and isn't lame enough to just lorem-ipsum it.
 ---
 
