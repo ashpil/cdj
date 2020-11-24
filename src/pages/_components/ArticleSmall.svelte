@@ -1,13 +1,7 @@
 <script>
-  import { ready } from '@roxi/routify';
   import Preview from './Preview.svelte';
 
   export let article;
-
-  let component;
-
-  component = article.component;
-
 </script>
 
 <style>
@@ -29,7 +23,7 @@
 </style>
 
 <div class="article">
-  <Preview slug={article.slug} {component} />
+  <Preview slug={article.slug} component={article.component} />
   <div class="description">
     <h2><a href={article.slug}>{article.title}</a></h2>
     <p>{article.description}</p>

@@ -16,10 +16,12 @@
         ...post.__file.children.find(child => child.file === 'index.svx').meta.frontmatter,
       }));
 
-        
-    let componentsReady = 0
-    setContext('ready', () => componentsReady++ )
-    $: if(componentsReady === articles.length) {$ready();}
+    let componentsReady = 0;
+    setContext('ready', () => {
+      componentsReady++;
+      return "";
+    });
+    $: if(componentsReady === articles.length) $ready();
 </script>
 
 <style>

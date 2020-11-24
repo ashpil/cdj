@@ -1,6 +1,6 @@
 <script>
   import { getContext } from 'svelte';
-
+  
   export let component;
   export let slug;
 </script>
@@ -31,7 +31,7 @@
 <a class="preview" href={slug}>
   {#await component then cmp}
     <svelte:component this={cmp} preview={true} />
-    {getContext('ready')() || ""}
+    {getContext('ready')()}
   {/await}
   <div class="highlight"></div>
 </a>
