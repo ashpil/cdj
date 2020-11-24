@@ -12,6 +12,8 @@ module.exports = {
   },
   rules: {
     'no-underscore-dangle': 0,
+    'arrow-parens': 0,
+    'no-plusplus': 0
   },
   settings: {
     'svelte3/ignore-styles': (t => true),

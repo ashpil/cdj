@@ -19,9 +19,9 @@
     let componentsReady = 0;
     setContext('ready', () => {
       componentsReady++;
-      return "";
+      return '';
     });
-    $: if(componentsReady === articles.length) $ready();
+    $: if (componentsReady === articles.length) $ready();
 </script>
 
 <style>
@@ -34,12 +34,12 @@
 </style>
 
 <Intro/>
-{#each articles.filter(article => article.featured) as article}
-  <ArticleBig {article} />
+{#each articles.filter(article => article.featured) as big}
+  <ArticleBig {big} />
 {/each}
 
 <div id="articles">
-  {#each articles.filter(article => !article.featured) as article}
-    <ArticleSmall {article} />
+  {#each articles.filter(article => !article.featured) as small}
+    <ArticleSmall {small} />
   {/each}
 </div>
