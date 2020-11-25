@@ -34,12 +34,13 @@
 </style>
 
 <Intro/>
-{#each articles.filter(article => article.featured) as big}
-  <ArticleBig {big} />
+{#each articles.filter(article => article.featured) as article}
+  <ArticleBig {article} />
 {/each}
 
 <div id="articles">
-  {#each articles.filter(article => !article.featured) as small}
-    <ArticleSmall {small} />
+  {#each articles.filter(article => !article.featured) as article}
+    <ArticleSmall {article} />
   {/each}
 </div>
+

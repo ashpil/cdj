@@ -1,3 +1,7 @@
+<script>
+  import Footer from './_components/Footer.svelte';
+</script>
+
 <style global>
   main {
     margin: 0 auto;
@@ -9,3 +13,5 @@
 <main>
   <slot />
 </main>
+<Footer />
+
