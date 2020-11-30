@@ -29,8 +29,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
     grid-gap: 2rem;
+    max-width: $max-width;
+    margin: 0 auto;
   }
-
 </style>
 
 <Intro/>

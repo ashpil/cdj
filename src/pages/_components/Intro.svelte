@@ -7,7 +7,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-items: end;
-    margin: 3rem 0;
+    margin: 3rem auto;
+    max-width: $max-width;
 
     #intro-desc {
       h1 {

@@ -1,3 +1,10 @@
-<main>
+<style>
+  #centered {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+</style>
+<div id="centered">
   <slot />
-</main>
+</div>

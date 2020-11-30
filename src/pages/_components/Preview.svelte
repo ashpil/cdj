@@ -7,32 +7,38 @@
 
 <style>
   .preview {
-    display: block;
-    padding: 1rem;
-    margin: 0.35rem;
-    border: 1px solid $gray;
     position: relative;
-    background-color: white;
-    bottom: 0.35rem;
-    left: 0.35rem;
+    display: block;
+    margin: 0 0 1rem 1rem;
+    .component {
+      position: relative;
+      z-index: 1;
+      border: 2px solid black;
+      background-color: white;
+      padding: 0.5rem;
+      max-height: 17rem;
+    }
 
     .highlight {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: $yellow;
+      background-color: white;
+      border: 2px solid black;
       right: 0.7rem;
       top: 0.7rem;
-      z-index: -1;
+      z-index: 0;
     }
   }
 </style>
 
 <a class="preview" href={slug}>
-  {#await component then cmp}
-    <svelte:component this={cmp} preview={true} />
-    {getContext('ready')()}
-  {/await}
+  <div class="component">
+    {#await component then cmp}
+      <svelte:component this={cmp} preview={true} />
+      {getContext('ready')()}
+    {/await}
+  </div>
   <div class="highlight"></div>
 </a>
 
