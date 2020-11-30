@@ -35,6 +35,8 @@ a {
   
   &:hover {
     text-decoration: underline;
+    text-decoration-color: $lightblue;
+    text-decoration-thickness: 3px;
   }
 }
 

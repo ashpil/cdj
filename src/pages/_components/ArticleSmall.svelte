@@ -9,7 +9,7 @@
     .description {
       margin: 2rem 0;
       h2 {
-        margin: 0;
+        margin: 2rem 0;
         font-size: 24px;
       }
 

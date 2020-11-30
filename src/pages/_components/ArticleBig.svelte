@@ -6,8 +6,9 @@
 
 <style>
   .article {
-    background-color: $light-magneta;
+    background-color: $lightmagneta;
     margin: 3rem 0;
+    padding: 0 1rem;
 
     .article_inner {
       max-width: $max-width;
@@ -19,8 +20,8 @@
 
       .description {
         h2 {
-          margin: 0;
           font-size: 28px;
+          margin: 0 0 1rem 0;
         }
         p {
           font-size: 20px;

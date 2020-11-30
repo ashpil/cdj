@@ -7,7 +7,7 @@
   .path {
     transition: fill 0.5s ease;
       &:hover {
-        fill: #7F6273;
+        fill: #333;
         cursor: pointer;
       }
   }

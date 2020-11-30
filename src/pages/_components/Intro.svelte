@@ -9,6 +9,7 @@
     justify-items: end;
     margin: 3rem auto;
     max-width: $max-width;
+    padding: 0 1rem;
 
     #intro-desc {
       h1 {
@@ -16,8 +17,8 @@
       }
       h3 {
         font-size: 22px;
-        font-weight: 200;
         margin: 0;
+        color: $gray;
       }
     }
   }

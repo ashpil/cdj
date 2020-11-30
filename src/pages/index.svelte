@@ -31,6 +31,7 @@
     grid-gap: 2rem;
     max-width: $max-width;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 </style>
 

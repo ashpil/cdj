@@ -9,7 +9,7 @@
   .preview {
     position: relative;
     display: block;
-    margin: 0 0 1rem 1rem;
+    padding: 0 1rem 1rem 0;
     .component {
       position: relative;
       z-index: 1;
@@ -17,17 +17,27 @@
       background-color: white;
       padding: 0.5rem;
       max-height: 17rem;
+      transition: border 200ms ease;
     }
 
     .highlight {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: calc(100% - 1rem);
+      height: calc(100% - 1rem);
       background-color: white;
       border: 2px solid black;
-      right: 0.7rem;
+      left: 0.7rem;
       top: 0.7rem;
       z-index: 0;
+      transition: width 200ms ease, height 200ms ease;
+    }
+
+    &:hover .highlight {
+      width: calc(100% - 0.7rem);
+      height: calc(100% - 0.7rem);
+    }
+    &:hover .component {
+      border: 2px solid $yellow;
     }
   }
 </style>

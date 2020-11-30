@@ -9,8 +9,11 @@
 
   let activeRegion;
 
-  const colorPalette = ['#FE7D00', '#FE7D00', '#FE7D00', '#FE7D00',
-    '#FE7D00', '#2BACBB', '#2BACBB', '#2BACBB', '#2BACBB', '#2BACBB'];
+  const colorPalette = ['#38003c', '#2a404e', '#274c52', '#265053',
+    '#255454', '#245956', '#226659', '#1f735d',
+    '#1c8060', '#198c64', '#169968', '#14a66b',
+    '#11b26f', '#0ebf73', '#0bcc76', '#08d97a',
+    '#06e67e', '#03f281', '#00ff85'];
 
   function getCountyData(countyName) {
     return data
@@ -37,7 +40,7 @@
     <MapRegion
       on:click={() => { activeRegion = name; }}
       {svgPath}
-      fillColour={activeRegion === name ? '#7F6273' : getCountyData(name).color}
+      fillColour={activeRegion === name ? '#333' : getCountyData(name).color}
     />
   {/each}
 </MapContainer>
