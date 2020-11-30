@@ -1,10 +1,12 @@
 <script>
     import { metatags } from '@roxi/routify';
-    import Nav from './_components/Nav.svelte';
+    import Intro from './_components/Intro.svelte';
 
-    metatags.title = 'Get Involved';
-    metatags.description = 'Description coming soon...';
+    const blurb = 'learn how to get involved with our club and what that entails.';
+
+    metatags.title = 'CDJ | Get Involved';
+    metatags.description = blurb;
 </script>
 
-<Nav/>
+<Intro {blurb} />
 

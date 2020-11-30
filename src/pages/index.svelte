@@ -5,8 +5,10 @@
     import ArticleBig from './_components/ArticleBig.svelte';
     import ArticleSmall from './_components/ArticleSmall.svelte';
 
+    const blurb = 'A digital magazine offering data-driven perspectives on current events, academics, politics, and beyond.';
+
     metatags.title = 'Cornell Data Journal';
-    metatags.description = 'A digital magazine offering data-driven perspectives on current events, academics, politics, and beyond.';
+    metatags.description = blurb;
 
     const articles = $layout.children
       .find(entry => entry.path === '/articles').children
@@ -35,7 +37,7 @@
   }
 </style>
 
-<Intro/>
+<Intro {blurb}/>
 {#each articles.filter(article => article.featured) as article}
   <ArticleBig {article} />
 {/each}

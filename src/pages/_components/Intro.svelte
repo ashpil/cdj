@@ -1,5 +1,7 @@
 <script>
     import Nav from './Nav.svelte';
+
+    export let blurb;
 </script>
 
 <style>
@@ -12,6 +14,7 @@
     padding: 0 1rem;
 
     #intro-desc {
+      justify-self: stretch;
       #title {
         display: flex;
         align-items: center;
@@ -47,10 +50,10 @@
 <div id="intro">
   <div id="intro-desc">
     <a id="title" href="/">
-      <img src="/images/logo.svg" alt="CDJ Logo">
+      <img src="/favicon.svg" alt="CDJ Logo">
       <h1>cornell data journal</h1>
     </a>
-    <h3>a digital magazine offering data-driven perspectives on current events, academics, politics, and beyond.</h3>
+    <h3>{blurb}<h3>
   </div>
   <Nav/>
 </div>

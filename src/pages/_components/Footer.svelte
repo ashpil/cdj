@@ -1,7 +1,7 @@
 <style>
   footer {
     margin-top: 5rem;
-    height: 10rem;
+    height: 7rem;
     background-color: $yellow;
   }
 </style>
