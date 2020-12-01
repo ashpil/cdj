@@ -1,3 +1,13 @@
+<script>
+  import { isActive, url } from '@roxi/routify';
+
+  const links = [
+    ['./about', 'about'],
+    ['./get_involved', 'get involved'],
+    ['./learn', 'learn'],
+  ];
+</script>
+
 <style>
   nav {
     display: grid;
@@ -10,12 +20,22 @@
       font-family: $font-secondary;
       font-weight: 900;
     }
+
+    .active {
+      color: $yellow;
+      &:hover {
+        text-decoration: none;
+        cursor: default;
+      }
+    }
   }
 </style>
 
 <nav>
-  <a href="/about">about</a>
-  <a href="/get_involved">get involved</a>
-  <a href="/learn">learn</a>
+  {#each links as [path, name]}
+    <a href={$url(path)} class:active={$isActive(path)}>
+      {name}
+    </a>
+  {/each}
 </nav>
 
