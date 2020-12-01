@@ -15,7 +15,7 @@
       margin: 0 auto;
       padding: 2rem 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       grid-gap: 2rem;
 
       .description {
@@ -30,7 +30,14 @@
       }
     }
   }
-
+  @media only screen and (max-width: $mobile-cutoff-xs) {
+    .article {
+      padding: 0 0.5rem;
+      .article_inner {
+        grid-template-columns: auto;
+      }
+    }
+  }
 </style>
 
 <div class="article">

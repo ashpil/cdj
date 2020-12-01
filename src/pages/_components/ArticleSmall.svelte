@@ -19,7 +19,6 @@
       }
     }
   }
-
 </style>
 
 <div class="article">

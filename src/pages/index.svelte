@@ -29,11 +29,17 @@
 <style>
   #articles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-gap: 2rem;
     max-width: $max-width;
     margin: 0 auto;
     padding: 0 1rem;
+  }
+  @media only screen and (max-width: $mobile-cutoff-xs) {
+    #articles {
+      padding: 0 0.5rem;
+      grid-template-columns: auto;
+    }
   }
 </style>
 
