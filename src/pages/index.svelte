@@ -15,7 +15,7 @@
       .map(post => ({
         slug: post.path,
         component: post.children.find(child => child.title === 'Preview_').component,
-        ...post.__file.children.find(child => child.file === 'index.svx').meta.frontmatter,
+        ...post.__file.children.find(child => child.isIndex).meta.frontmatter,
       }));
 
     let componentsReady = 0;
