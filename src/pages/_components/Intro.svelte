@@ -58,6 +58,7 @@
       margin: 0;
       color: $gray;
       grid-area: desc;
+      font-family: $font-primary;
     }
     nav {
       grid-area: nav;
