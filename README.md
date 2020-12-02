@@ -22,3 +22,5 @@ There is a demo article in
 [`src/pages/articles/example-article/`](src/pages/articles/example-article/).
 It is written with the [mdsvex plugin](https://mdsvex.com/playground).
 
+To run eslint locally, you can just do `npx eslint [directory]`.
+
