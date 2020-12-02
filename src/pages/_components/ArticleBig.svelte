@@ -2,11 +2,13 @@
   import Preview from './Preview.svelte';
 
   export let article;
+
+  let windowWidth;
 </script>
 
 <style>
   .article {
-    background-color: $lightmagneta;
+    background-color: $lavender;
     margin: 3rem 0;
     padding: 0 1rem;
 
@@ -29,6 +31,16 @@
         }
       }
     }
+    .line {
+      margin: 0 4rem 0 0rem;
+      border: 2px solid $lightgray;
+      border-radius: 0.5rem;
+    }
+  }
+  @media only screen and (max-width: $mobile-cutoff) {
+    .article {
+      background-color: transparent;
+    }
   }
   @media only screen and (max-width: $mobile-cutoff-xs) {
     .article {
@@ -40,7 +52,11 @@
   }
 </style>
 
+<svelte:window bind:outerWidth={windowWidth}/>
 <div class="article">
+  {#if windowWidth <= 950}
+    <div class="line"></div>
+  {/if}
   <div class="article_inner">
     <Preview slug={article.slug} component={article.component} />
     <div class="description">

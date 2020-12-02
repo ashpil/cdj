@@ -2,7 +2,7 @@
     import { metatags } from '@roxi/routify';
     import Intro from './_components/Intro.svelte';
 
-    const blurb = 'wow some stuff about us, thats kinda crazy like were doing things.'; // TODO: fix this
+    const blurb = 'learn how to get involved with our club and what that entails.';
 
     metatags.title = 'CDJ | About Us';
     metatags.description = blurb;

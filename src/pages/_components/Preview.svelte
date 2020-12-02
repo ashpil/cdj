@@ -29,12 +29,13 @@
       left: 0.7rem;
       top: 0.7rem;
       z-index: 0;
-      transition: width 200ms ease, height 200ms ease;
+      transition: width 200ms ease, height 200ms ease, border 200ms ease;
     }
 
     &:hover .highlight {
       width: calc(100% - 0.7rem);
       height: calc(100% - 0.7rem);
+      border: 2px solid $yellow;
     }
     &:hover .component {
       border: 2px solid $yellow;
