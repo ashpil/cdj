@@ -86,6 +86,8 @@ function baseConfig(config, ctx) {
             }),
             commonjs(),
 
+            !production && replace({'process.env.NODE_ENV': JSON.stringify('development')}),
+
             production && terser(), // minify
             !production && isNollup && Hmr({ inMemory: true, public: staticDir, }), // refresh only updated code
             !production && !isNollup && livereload(distDir), // refresh entire window when code is updated

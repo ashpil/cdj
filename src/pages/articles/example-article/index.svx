@@ -2,6 +2,7 @@
 featured: true
 title: Here's Ten Things That at One Point Were a Long Article Title
 description: The amazing story of how your web developer keeps running out of stand-in words and isn't lame enough to just lorem-ipsum it.
+authors: [ person one, person two, someone else ]
 ---
 
 <!-- I mostly based this off of https://dev.to/pjaerr/lets-create-a-data-visualization-using-svelte-4m6p -->

@@ -1,5 +1,6 @@
 <script>
   import Preview from './Preview.svelte';
+  import Authors from './Authors.svelte';
 
   export let article;
 </script>
@@ -26,6 +27,7 @@
   <div class="description">
     <h2><a href={article.slug}>{article.title}</a></h2>
     <p>{article.description}</p>
+    <Authors authors={article.authors} />
   </div>
 </div>
 
