@@ -4,7 +4,7 @@
 </script>
 
 <style global>
-  @import 'static/styles/typography.scss';
+  @import 'assets/styles/typography.scss';
 
   body {
     margin: 0;

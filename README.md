@@ -14,7 +14,7 @@ As a prerequisite, if you don't have it already, install [node](https://nodejs.o
 as `npx` - `npm install -g npx`.
 
 To get this site running locally, clone it, run `npm install` in the directory,
-and to start it, use `npm run dev`.
+and to start it, use `npm run dev:ssr`.
 
 See [`src/pages/`](src/pages/) for some examples of what making pages with Svelte looks like.
 
