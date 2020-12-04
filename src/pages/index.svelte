@@ -5,7 +5,7 @@
     import ArticleBig from './_components/ArticleBig.svelte';
     import ArticleSmall from './_components/ArticleSmall.svelte';
 
-    const blurb = 'a digital magazine offering data-driven perspectives on current events, academics, politics, and beyond.';
+    const blurb = 'offering data-driven perspectives on current events, academics, politics, and beyond.';
 
     metatags.title = 'Cornell Data Journal';
     metatags.description = blurb;

@@ -150,6 +150,7 @@
       #title {
         padding: 0;
         h1 {
+          font-size: 45px;
           line-height: 1.3;
           margin: 1rem 0;
         }
@@ -171,7 +172,7 @@
       }
     }
   }
-  @media only screen and (max-width: 580px) {
+  @media only screen and (max-width: 480px) {
     #intro {
       #title {
         h1 {
