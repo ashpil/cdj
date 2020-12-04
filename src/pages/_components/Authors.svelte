@@ -1,7 +1,7 @@
 <script>
   export let authors;
 
-  const colors = ["#A5BDDA", "#2D2D94", "#EAC428", "#672893"];
+  const colors = ['#A5BDDA', '#2D2D94', '#EAC428', '#672893'];
 </script>
 
 <style>
