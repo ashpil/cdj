@@ -1,7 +1,7 @@
 <script>
   export let authors;
 
-  const colors = ["#A5BDDA", "#2D2D94", "#EAC428"];
+  const colors = ["#A5BDDA", "#2D2D94", "#EAC428", "#672893"];
 </script>
 
 <style>
@@ -49,7 +49,7 @@
 
 <div class="authors">
   {#each authors as author, i}
-    <span class="author" style="background-color:{colors[i % 3]};">
+    <span class="author" style="background-color:{colors[i % authors.length]};">
       <span class="tooltiptext">{author}</span>
     </span>
   {/each}
