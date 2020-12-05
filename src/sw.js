@@ -106,3 +106,4 @@ function hasWitheringCache(event) {
     return validFor / 2 > validFor - validLeft
   }
 }
+

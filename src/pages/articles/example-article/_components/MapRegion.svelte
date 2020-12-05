@@ -3,11 +3,11 @@
   export let svgPath;
 </script>
 
-<style lang="scss">
+<style>
   .path {
     transition: fill 0.5s ease;
       &:hover {
-        fill: #333;
+        fill: #7F6273;
         cursor: pointer;
       }
   }

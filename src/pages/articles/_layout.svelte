@@ -1,14 +1,11 @@
-<style lang="scss" global>
-    .articles {
-        width: 60rem;
-        margin: 0 auto;
+<style>
+  #centered {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 
-        img {
-            max-width: 100%;
-        }
-    }
 </style>
-
-<div class="articles">
-    <slot />
+<div id="centered">
+  <slot />
 </div>

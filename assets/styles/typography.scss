@@ -1,0 +1,47 @@
+@import 'variables';
+
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Mulish'),
+    local('Mulish Regular'), 
+    local('Mulish-Regular'), 
+    url('/fonts/mulish-latin-400-normal.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/fonts/mulish-latin-400-normal.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src:
+    local('Poppins Regular'),
+    local('Poppins-Regular'), 
+    url('/fonts/poppins-latin-600-normal.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/fonts/poppins-latin-600-normal.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+  font-family: $font-primary;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $lightblue;
+    text-decoration-thickness: 3px;
+  }
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 0.8;
+}
+
