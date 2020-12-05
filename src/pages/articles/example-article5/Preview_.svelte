@@ -26,7 +26,6 @@
 </script>
 
 {#if preview !== true }
-  <h3>{activeRegion ?? 'None'}</h3>
   {#if activeRegion}
     <CountyInformation
       county={getCountyData(activeRegion)}
