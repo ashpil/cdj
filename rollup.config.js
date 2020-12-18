@@ -71,6 +71,7 @@ export default {
           url: "copy",
           assetsPath: "images",
           publicPath: "/build/images/",
+          useHash: true,
         }),
 
         // resolve matching modules from current working directory

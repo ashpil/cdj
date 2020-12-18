@@ -1,0 +1,180 @@
+---
+featured: true
+title: The elegant geometry behind Rwanda’s COVID-19 pooled testing strategy
+description: Drawing inspiration from multidimensional geometry, scientists from the University of Rwanda have a devised a method to dramatically increase the nation's COVID-19 testing capacity.
+authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
+---
+
+<script>
+  import rubiks from './_images/rubiks.png';
+  import xaxis from './_images/xaxis.png';
+  import yaxis from './_images/yaxis.png';
+  import zaxis from './_images/zaxis.png';
+  import xaxisresults from './_images/xaxisresults.png';
+  import yaxisresults from './_images/yaxisresults.png';
+  import zaxisresults from './_images/zaxisresults.png';
+  import xoverlap from './_images/xoverlap.png';
+  import yoverlap from './_images/yoverlap.png';
+  import unknown from './_images/unknown.png';
+  import positive from './_images/positive.png';
+  import negative from './_images/negative.png';
+  import result from './_images/result.png';
+  import hypercubes from './_images/hypercubes.png';
+</script>
+
+<style>
+  figcaption {
+    text-align: center;
+  }
+  .image-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+  }
+  .comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    place-items: center;
+    img {
+      max-height: 13rem;
+    }
+  }
+
+  .alone {
+    display: block;
+    max-height: 15rem;
+    margin: 0 auto;
+  }
+</style>
+
+# {title}
+
+Due to a strict lockdown and some tech savvy solutions, Rwanda has remarkably been able to keep its COVID-19 prevalence low. Up until Dec. 1, Rwanda has reported 5,934 cases as compared to similarly sized Pennsylvania’s 102,158.
+Drones have been retrofitted with megaphones to broadcast coronavirus, and
+public gatherings have been limited to five or fewer people. As reported by the Wall Street Journal, over 70,000 people have been arrested for social distancing infractions.  
+As the country looks to further optimize their testing protocols, researchers at the University of Rwanda have devised a [geometric method](https://www.nature.com/articles/s41586-020-2885-5) to reduce the number of covid tests needed.
+
+The way pooled testing works is simple. First, each patient is swabbed for COVID-19. These samples are combined into a single batch. If the batch tests negative, then each sample in the batch is COVID-19 negative. If the batch tests positive, each sample is then tested individually for COVID-19. 
+
+[Cornell for example](https://news.cornell.edu/stories/2020/08/robots-know-how-drive-covid-labs-massive-testing-effort) employs pooled testing to screen 93 samples at a time. With the help of robots to automate the pooling process, the College of Veterinary Medicine tests about 6,000 people a day. Despite this impressive result, we can do better. By creatively splitting and recombining batch samples, thousands of dollars can be saved when testing large populations. 
+
+## A simple example
+To demonstrate how efficient the University of Rwanda’s geometric pooled testing strategy is, let’s start with a simple example. Suppose we want to test 27 people. If we wanted to test each person individually, we would need 27 tests. 
+
+<div class="image-one">
+  <p>
+    However, with the geometric pooling method, we can reduce the number of tests needed to 9. First, let’s organize the samples onto something that resembles a Rubik’s cube. The 3-dimensional cube has a side length of 3.  We cut the cube into three slices in three different directions. In total, we have nine slices to test. 
+  </p>
+  <img src={rubiks} alt="Basic Rubik's Cube">
+</div>
+
+<div class="comparison">
+  <figure>
+    <img src={xaxis} alt="X-Axis Cuts">
+    <figcaption>X-Axis Cuts</figcaption>
+  </figure>
+  <figure>
+    <img src={yaxis} alt="Y-Axis Cuts">
+    <figcaption>Y-Axis Cuts</figcaption>
+  </figure>
+  <figure>
+    <img src={zaxis} alt="Z-Axis Cuts">
+    <figcaption>Z-Axis Cuts</figcaption>
+  </figure>
+</div>
+
+Next, we perform a test on each sample. Three slices happen to test positive.
+
+<div class="comparison">
+  <figure>
+    <img src={unknown} alt="Unknown">
+    <figcaption>Unknown</figcaption>
+  </figure>
+  <figure>
+    <img src={positive} alt="Positive Test">
+    <figcaption>Positive Test</figcaption>
+  </figure>
+  <figure>
+    <img src={negative} alt="Negative Test">
+    <figcaption>Negative Test</figcaption>
+  </figure>
+</div>
+
+<div class="comparison">
+  <figure>
+    <img src={xaxisresults} alt="X-Axis Results">
+    <figcaption>X-Axis Results</figcaption>
+  </figure>
+  <figure>
+    <img src={yaxisresults} alt="Y-Axis Results">
+    <figcaption>Y-Axis Results</figcaption>
+  </figure>
+  <figure>
+    <img src={zaxisresults} alt="Z-Axis Results">
+    <figcaption>Z-Axis Results</figcaption>
+  </figure>
+</div>
+
+Finally, with these nine tests, we can tell which sample is positive by seeing where the positive slices overlap.
+
+<div class="comparison">
+  <img src={xoverlap} alt="X-Axis Overlap">
+  <img src={yoverlap} alt="Y-Axis Overlap">
+</div>
+
+Using this geometric slicing strategy, we were able to test 27 people with only 9 tests. To curb the spread of COVID-19, a reduction in tests is critical. In Rwanda, where a test can cost a laboratory $50, stepping down from 27 tests to 9 can save $900.
+
+<img class="alone" src={result} alt="Result">
+
+## Utilizing higher dimensions
+In three dimensions, a cube is defined by three coordinates: (x,y,z). Taking a slice is the same as setting one of these coordinates as a constant. For example, z = 0 represents the slice given by the xy-plane: (x,y,0). 
+This idea extrapolates to hypercubes — cubes in a dimension greater than three. A four-dimensional cube would be represented by the four coordinates (x,y,z,w). If we take a slice of this cube, we set one of the variables constant. 
+
+### X-Axis Cuts
+
+<img class="alone" src={hypercubes} alt="Hypercubes">
+
+If the four-dimensional cube has side lengths of three, we can fit 3<sup>4</sup>, or 81, samples on this cube.
+
+## A trickier example
+
+Let’s now say that we now want to identify two positives in a group of 81 samples. We place the samples on a 4D hypercube and perform the first round of slice tests. We see that in each axis, two of the three slices test positive.
+
+### X-Axis Cuts
+### Y-Axis Cuts
+### Z-Axis Cuts
+### W-Axis Cuts
+
+Notice that in each principal direction, two out of the three slices test positive. This is different from our 3D example because in that example, only one of three slices tested positive. To determine which samples test positive, another round of testing is needed. The other positive is found by elimination. 
+To find the first positive sample, we take one of the slices and slice it again. For instance, let’s take the cube (x,y,z,1). 
+
+### Slices of the cube (x,y,z,1)
+
+We see that sample (1,2,2,1) tests positive. With this information, we can update our previous slices by removing the known positive.
+
+### X-Axis Cuts
+### Y-Axis Cuts
+### Z-Axis Cuts
+### W-Axis Cuts
+
+By seeing where the slices intersect, we see that the remaining positive is at the coordinate (0,0,1,2).
+
+In total, we screened 81 samples with 21 tests, a significant improvement!
+
+
+## Applying this to the real world
+
+Pooled testing has the potential to reduce COVID-19 caseload significantly. Cornell Professor Peter Frazier estimates that if the entire U.S. population was tested in a four-week period, then the COVID-19 prevalence rate [would drop to 0.3%, allowing 90% of adults to return to work](https://docs.google.com/document/d/1hw5K5V7XOug_r6CQ0UYt25szQxXFPmZmFhK15ZpH5U0/edit?ts=5e934170).
+
+ To demonstrate how efficient geometric pooled testing, let’s use Cornell as an example. 
+On Nov. 13, Cornell saw a spike in COVID-19 cases [due to several social gatherings](https://covid.cornell.edu/updates/20201112-increase-covid-19-cases.cfm). Out of 5,990 people tested that day, 9 tests came back positive. With Cornell’s naive pooling method, the 5,990 samples would first be split up into 65 pools of 93 samples each. Each pool would then be tested for COVID-19. If the pool tests positive, each of the 93 samples is then tested individually to identify the infected individuals. Based on the prevalence rate, on average, about 8.39 out of the 65 pools would test positive. On average, 65 + 8.39(93), or 845, tests would be performed. 
+
+Instead of naive pooling, let’s now try the geometric pooling method. First, we split the 5,990 samples onto 74 4D hypercubes with length 3. Each hypercube holds 81 samples. In the first round of testing, each hypercube is tested as a whole. On average, 8.35 hypercubes test positive. 99.1% of the time, each positive hypercube only contains 1 positive sample. In this case, 12 tests are performed. The other 0.9% of the time, the hypercube contains 2 positive samples. Here, 21 tests would be needed. There is also the extreme case that each hypercube contains 3 or more positive samples, but the probability of that occurring is negligible. Taking a weighted average of these probabilities, the expected number of testes required per positive cube is 99.1%(12) + (0.09%)21 = 12.081 tests. Therefore, our total number of tests required is on average, 74 + 8.35(12.081) = 175 tests. We see that geometric pooling requires 4.83x fewer tests than naive pooling!
+
+If pooled testing is so efficient, why aren’t more countries adopting it? In reality, pooling is tough. It’s easy to imagine how mistakes can be made when sorting pooling by hand. Also, with how sensitive the COVID-19 tests are, pooling may increase the rate of false positives or negatives. 
+
+Nonetheless, pooled testing has profound implications in other areas of research such as computer science. For instance, this group testing method can be used to rapidly find a broken lightbulb in a series of Christmas lights. In practice, group testing is used to locate incorrect bits in computer programs.  
+
+In Rwanda, the researchers are now developing software to automate the geometric pooling process. Although the process is still in its infancy, field trials have begun in the country. In South Africa, a rugby team has also begun to use the testing method to screen its players and staff. With a dramatic expansion in testing, hopefully, we can see an end to this pandemic soon. 
+
+

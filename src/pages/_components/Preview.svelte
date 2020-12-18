@@ -15,9 +15,9 @@
       z-index: 1;
       border: 2px solid black;
       background-color: white;
-      padding: 0.5rem;
       max-height: 17rem;
       transition: border 200ms ease;
+      overflow: hidden;
     }
 
     .highlight {
