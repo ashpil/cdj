@@ -1,12 +1,15 @@
 <script>
     import { metatags } from '@roxi/routify';
     import Intro from './_components/Intro.svelte';
+    import InProgress from './_components/InProgress.svelte';
 
-    const blurb = 'learn how to get involved with our club and what that entails.';
+    const blurb = 'offering data-driven perspectives on current events, academics, politics, and beyond.';
 
     metatags.title = 'CDJ | About Us';
     metatags.description = blurb;
 </script>
 
 <Intro {blurb} />
+
+<InProgress />
 

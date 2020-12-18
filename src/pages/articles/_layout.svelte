@@ -1,5 +1,5 @@
 <script>
-  import Intro from '../_components/Intro.svelte';
+  import Header from '../_components/Header.svelte';
 </script>
 <style global>
   #centered {
@@ -21,7 +21,7 @@
     font-size: 20px;
   }
 </style>
-<Intro blurb=""/>
+<Header />
 <div id="centered">
   <slot />
 </div>
