@@ -54,7 +54,7 @@ export default {
             // Extract component CSS — better performance
             css: css => css.write(`bundle.css`),
             hot: isNollup,
-            extensions: [".svelte", ".svx"],
+            extensions: [".svelte", ".svx", ".html"],
             preprocess: [
                 mdsvex(),
                 autoPreprocess({
@@ -71,6 +71,7 @@ export default {
           url: "copy",
           assetsPath: "images",
           publicPath: "/build/images/",
+          useHash: true,
         }),
 
         // resolve matching modules from current working directory

@@ -5,6 +5,7 @@
 <style global>
   main {
     margin: 0 auto;
+    overflow: hidden;
   }
 </style>
 
