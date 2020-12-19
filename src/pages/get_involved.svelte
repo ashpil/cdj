@@ -1,6 +1,7 @@
 <script>
     import { metatags } from '@roxi/routify';
     import Intro from './_components/Intro.svelte';
+    import InProgress from './_components/InProgress.svelte';
 
     const blurb = 'learn how to get involved with our club and what that entails.';
 
@@ -10,3 +11,4 @@
 
 <Intro {blurb} />
 
+<InProgress />

@@ -43,6 +43,9 @@
         visibility: visible;
         opacity: 1;
       }
+      img {
+        max-height: 100%;
+      }
     }
   }
 </style>
@@ -50,6 +53,7 @@
 <div class="authors">
   {#each authors as author, i}
     <span class="author" style="background-color:{colors[i % authors.length]};">
+      <img src="authors/{author.replace(' ', '_')}.png" on:error={e => e.target.remove()} alt={author}>
       <span class="tooltiptext">{author}</span>
     </span>
   {/each}

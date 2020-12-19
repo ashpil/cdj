@@ -1,0 +1,10 @@
+---
+title: odyssee
+description: Back in March, the shiro team invited 50 people from across the world to record their experiences—their activities and their feelings—for 30 days during the (first) peak of the pandemic.
+authors: [ Shiro Team ]
+---
+
+<script>
+  window.location.replace('http://odyssee.community/')
+</script>
+
