@@ -51,6 +51,8 @@
       }
       h1 {
         margin: 0;
+        font-size: 55px;
+        line-height: 0.8;
       }
     }
     #blurb {

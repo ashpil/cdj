@@ -6,6 +6,7 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
 ---
 
 <script>
+  import Wrapper from '../../_components/Wrapper.svelte'
   import rubiks from './_images/rubiks.png';
   import xaxis from './_images/xaxis.png';
   import yaxis from './_images/yaxis.png';
@@ -46,6 +47,8 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
     margin: 0 auto;
   }
 </style>
+
+<Wrapper>
 
 # {title}
 
@@ -177,4 +180,5 @@ Nonetheless, pooled testing has profound implications in other areas of research
 
 In Rwanda, the researchers are now developing software to automate the geometric pooling process. Although the process is still in its infancy, field trials have begun in the country. In South Africa, a rugby team has also begun to use the testing method to screen its players and staff. With a dramatic expansion in testing, hopefully, we can see an end to this pandemic soon. 
 
+</Wrapper>
 

@@ -2,7 +2,7 @@
   import Footer from './_components/Footer.svelte';
 </script>
 
-<style global>
+<style>
   main {
     margin: 0 auto;
     overflow: hidden;

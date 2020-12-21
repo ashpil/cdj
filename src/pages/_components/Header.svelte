@@ -13,6 +13,7 @@
       margin: 0.5rem;
       font-size: 35px;
       font-family: $font-secondary;
+      line-height: initial;
     }
     
     &:hover {
