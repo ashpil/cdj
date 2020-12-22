@@ -820,7 +820,7 @@
           dist_label2.attr('opacity', 0);
         });
 
-        active.on('mousemove', () => {
+        active.on('mousemove', function () {
           const mouse_loc = d3.mouse(this);
           const x = mouse_loc[0];
           const xyear = yearScale.invert(x);
@@ -937,7 +937,7 @@
         .attr('alignment-baseline', 'middle');
     };
   
-    const url = 'https://d3js.org/d3.v5.min.js';
+    const url = 'https://d3js.org/d3.v5.js';
   
     loader([{ type: 'script', url }], (() => !!window.d3), callback);
 }
