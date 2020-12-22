@@ -937,7 +937,7 @@
         .attr('alignment-baseline', 'middle');
     };
   
-    const url = 'https://d3js.org/d3.v5.js';
+    const url = 'https://d3js.org/d3.v5.min.js';
   
     loader([{ type: 'script', url }], (() => !!window.d3), callback);
 }
