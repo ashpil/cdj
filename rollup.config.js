@@ -12,6 +12,7 @@ import postcssImport from 'postcss-import'
 import { injectManifest } from 'rollup-plugin-workbox'
 import { mdsvex } from "mdsvex";
 import smartAsset from "rollup-plugin-smart-asset";
+import json from '@rollup/plugin-json';
 
 const { distDir } = getConfig() // use Routify's distDir for SSOT
 const assetsDir = 'assets'
@@ -65,13 +66,22 @@ export default {
                       includePaths: ["assets/styles", "node_modules"],
                     }
                 })
-            ]
+            ],
+            onwarn: (warning, handler) => {
+                // e.g. don't warn on a11y-autofocus
+                if (warning.code === 'a11y-media-has-caption') return
+
+                // let Rollup handle all other warnings normally
+                handler(warning)
+            }
         }),
+        json(),
         smartAsset({
           url: "copy",
           assetsPath: "images",
           publicPath: "/build/images/",
           useHash: true,
+          extensions: [".svg", ".gif", ".png", ".jpg", ".mp3", ".csv"], 
         }),
 
         // resolve matching modules from current working directory

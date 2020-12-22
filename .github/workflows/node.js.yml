@@ -30,6 +30,6 @@ jobs:
           ${{ runner.OS }}-
     - run: npm ci
     - name: Run ESLint
-      run: yarn run eslint src/pages/
+      run: yarn run eslint src/pages/ --quiet
     - run: npm run build
     - run: npm test
