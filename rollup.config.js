@@ -49,6 +49,13 @@ export default {
         // for performance, disabling filename hashing in development
         chunkFileNames:`[name]${production && '-[hash]' || ''}.js`
     },
+    onwarn: (warning, handler) => {
+        const ignoredWarnings = [
+          'CIRCULAR_DEPENDENCY',
+        ];
+
+        if (!ignoredWarnings.includes(warning.code)) handler(warning)
+    },
     plugins: [
         svelte({
             dev: !production, // run-time checks      
@@ -68,11 +75,11 @@ export default {
                 })
             ],
             onwarn: (warning, handler) => {
-                // e.g. don't warn on a11y-autofocus
-                if (warning.code === 'a11y-media-has-caption') return
+                const ignoredWarnings = [
+                  'a11y-media-has-caption',
+                ];
 
-                // let Rollup handle all other warnings normally
-                handler(warning)
+                if (!ignoredWarnings.includes(warning.code)) handler(warning)
             }
         }),
         json(),
