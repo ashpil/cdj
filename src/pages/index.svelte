@@ -8,7 +8,7 @@
     const blurb = 'offering data-driven perspectives on current events, academics, politics, and beyond.';
 
     metatags.title = 'Cornell Data Journal';
-    metatags.description = 'A semesterly magazine ' + blurb;
+    metatags.description = `A semesterly magazine ${blurb}`;
 
     const articles = $layout.children
       .find(entry => entry.path === '/articles').children
