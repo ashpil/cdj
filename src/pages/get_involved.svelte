@@ -5,7 +5,7 @@
 
     const blurb = 'learn how to get involved with our club and what that entails.';
 
-    metatags.title = 'CDJ | Get Involved';
+    metatags.title = 'Get Involved | CDJ';
     metatags.description = blurb;
 </script>
 

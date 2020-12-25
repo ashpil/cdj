@@ -5,7 +5,7 @@
 
     const blurb = 'offering data-driven perspectives on current events, academics, politics, and beyond.';
 
-    metatags.title = 'CDJ | About Us';
+    metatags.title = 'About Us | CDJ';
     metatags.description = blurb;
 </script>
 
