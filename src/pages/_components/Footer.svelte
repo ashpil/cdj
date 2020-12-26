@@ -16,6 +16,15 @@
       margin: 1.5rem;
     }
   }
+
+  @media only screen and (max-width: $mobile-cutoff) {
+    #socials {
+      a {
+        width: 2.5rem;
+        margin: 1rem;
+      }
+    }
+  }
 </style>
 
 <footer>
