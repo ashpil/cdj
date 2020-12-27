@@ -7,44 +7,90 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
 
 <script>
   import Wrapper from '../../_components/Wrapper.svelte'
-  import rubiks from './_images/rubiks.png';
-  import xaxis from './_images/xaxis.png';
-  import yaxis from './_images/yaxis.png';
-  import zaxis from './_images/zaxis.png';
-  import xaxisresults from './_images/xaxisresults.png';
-  import yaxisresults from './_images/yaxisresults.png';
-  import zaxisresults from './_images/zaxisresults.png';
-  import xoverlap from './_images/xoverlap.png';
-  import yoverlap from './_images/yoverlap.png';
-  import unknown from './_images/unknown.png';
-  import positive from './_images/positive.png';
-  import negative from './_images/negative.png';
-  import result from './_images/result.png';
-  import hypercubes from './_images/hypercubes.png';
+
+  import fig1 from './_images/fig1.png';
+
+  import fig2_1 from './_images/fig2-1.png';
+  import fig2_2 from './_images/fig2-2.png';
+  import fig2_3 from './_images/fig2-3.png';
+
+  import fig3_1 from './_images/fig3-1.png';
+  import fig3_2 from './_images/fig3-2.png';
+  import fig3_3 from './_images/fig3-3.png';
+
+  import fig4_1 from './_images/fig4-1.png';
+  import fig4_2 from './_images/fig4-2.png';
+  import fig4_3 from './_images/fig4-3.png';
+
+  import fig5_1 from './_images/fig5-1.png';
+  import fig5_2 from './_images/fig5-2.png';
+  import fig5_3 from './_images/fig5-3.png';
+
+  import fig6 from './_images/fig6.png';
+
+  import fig7 from './_images/fig7.png';
+
+  import fig8 from './_images/fig8.png';
+
+  import fig20 from './_images/fig20.png';
+
+  import fig18_1 from './_images/fig18-1.png';
+  import fig18_2 from './_images/fig18-2.png';
+  import fig18_3 from './_images/fig18-3.png';
+
+  import fig17 from './_images/fig17.png';
+
+  import fig19 from './_images/fig19.png';
+
+  import fig11_1 from './_images/fig11-1.png';
+  import fig11_2 from './_images/fig11-2.png';
+
+  import fig21_1 from './_images/fig21-1.png';
+  import fig21_2 from './_images/fig21-2.png';
+  import fig21_3 from './_images/fig21-3.png';
+
+  import fig22 from './_images/fig22.png';
+
+  import fig23 from './_images/fig23.png';
+
+  import unknown from './_images/72_hypercubes_unknown.png';
+  import known from './_images/72_hypercubes_known.png';
+
+  import K from '../../_components/Katex.svelte';
+
 </script>
 
 <style>
+  img {
+    padding: 1rem;
+    max-height: 13rem;
+    box-sizing: border-box;
+  }
   figcaption {
     text-align: center;
+  }
+  figure {
+    margin: 0;
   }
   .image-one {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 2rem;
+    place-items: center;
   }
   .comparison {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     place-items: center;
-    img {
-      max-height: 13rem;
-    }
+    margin: 2rem 0;
+    grid-gap: 4rem;
   }
 
   .alone {
     display: block;
-    max-height: 15rem;
     margin: 0 auto;
+  }
+  img.big {
+    max-height: initial;
   }
 </style>
 
@@ -52,36 +98,36 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
 
 # {title}
 
-Due to a strict lockdown and some tech savvy solutions, Rwanda has remarkably been able to keep its COVID-19 prevalence low. Up until Dec. 1, Rwanda has reported 5,934 cases as compared to similarly sized Pennsylvania’s 102,158.
-Drones have been retrofitted with megaphones to broadcast coronavirus, and
-public gatherings have been limited to five or fewer people. As reported by the Wall Street Journal, over 70,000 people have been arrested for social distancing infractions.  
-As the country looks to further optimize their testing protocols, researchers at the University of Rwanda have devised a [geometric method](https://www.nature.com/articles/s41586-020-2885-5) to reduce the number of covid tests needed.
+Due to a strict lockdown and some tech savvy solutions, Rwanda has remarkably been able to keep its COVID-19 prevalence low. Up until Dec. 16, the Rwanda Biomedical Center has reported 7,032 cases in the country. Pennsylvania, which has a similar population of 12.5 million, has reported 481,819 cases.
+Part of the reason Rwanda has been so successful in preventing the spread of COVID-19 is because of severe action from the government. As reported by the Wall Street Journal, over 70,000 people have been arrested for social distancing infractions.  
+But the country has also developed some innovative methods and technologies for dealing with COVID-19. Researchers at the University of Rwanda, for example, devised [a unique geometric method](https://www.nature.com/articles/s41586-020-2885-5) to reduce the number of COVID-19 tests needed. This powerful geometric method, also called pooled testing, is surprisingly elegant, and I’ll explain why.
 
 The way pooled testing works is simple. First, each patient is swabbed for COVID-19. These samples are combined into a single batch. If the batch tests negative, then each sample in the batch is COVID-19 negative. If the batch tests positive, each sample is then tested individually for COVID-19. 
 
-[Cornell for example](https://news.cornell.edu/stories/2020/08/robots-know-how-drive-covid-labs-massive-testing-effort) employs pooled testing to screen 93 samples at a time. With the help of robots to automate the pooling process, the College of Veterinary Medicine tests about 6,000 people a day. Despite this impressive result, we can do better. By creatively splitting and recombining batch samples, thousands of dollars can be saved when testing large populations. 
-
-## A simple example
-To demonstrate how efficient the University of Rwanda’s geometric pooled testing strategy is, let’s start with a simple example. Suppose we want to test 27 people. If we wanted to test each person individually, we would need 27 tests. 
+[Cornell, for example](https://news.cornell.edu/stories/2020/08/robots-know-how-drive-covid-labs-massive-testing-effort), employs pooled testing to screen 93 samples at a time. With the help of robots to automate the pooling process, the College of Veterinary Medicine tests about 6,000 people a day. Despite this impressive result, we can do better. By creatively splitting and recombining batch samples, thousands of dollars can be saved when testing large populations.
 
 <div class="image-one">
-  <p>
-    However, with the geometric pooling method, we can reduce the number of tests needed to 9. First, let’s organize the samples onto something that resembles a Rubik’s cube. The 3-dimensional cube has a side length of 3.  We cut the cube into three slices in three different directions. In total, we have nine slices to test. 
-  </p>
-  <img src={rubiks} alt="Basic Rubik's Cube">
+  <div>
+
+    To demonstrate how efficient the University of Rwanda’s geometric pooled testing strategy is, let’s start with a simple example. Suppose we want to test 27 people. If we wanted to test each person individually, we would need 27 tests. 
+
+  However, with the geometric pooling method, we can reduce the number of tests needed to 9. First, let’s organize the samples onto something that resembles a Rubik’s cube. The 3-dimensional cube has a side length of 3.  We cut the cube into three slices in three different directions. In total, we have nine slices to test. 
+
+  </div>
+  <img src={fig1} alt="Basic Rubik's Cube">
 </div>
 
 <div class="comparison">
   <figure>
-    <img src={xaxis} alt="X-Axis Cuts">
+    <img src={fig2_1} alt="X-Axis Cuts">
     <figcaption>X-Axis Cuts</figcaption>
   </figure>
   <figure>
-    <img src={yaxis} alt="Y-Axis Cuts">
+    <img src={fig2_2} alt="Y-Axis Cuts">
     <figcaption>Y-Axis Cuts</figcaption>
   </figure>
   <figure>
-    <img src={zaxis} alt="Z-Axis Cuts">
+    <img src={fig2_3} alt="Z-Axis Cuts">
     <figcaption>Z-Axis Cuts</figcaption>
   </figure>
 </div>
@@ -90,30 +136,30 @@ Next, we perform a test on each sample. Three slices happen to test positive.
 
 <div class="comparison">
   <figure>
-    <img src={unknown} alt="Unknown">
+    <img src={fig3_1} alt="Unknown">
     <figcaption>Unknown</figcaption>
   </figure>
   <figure>
-    <img src={positive} alt="Positive Test">
+    <img src={fig3_2} alt="Positive Test">
     <figcaption>Positive Test</figcaption>
   </figure>
   <figure>
-    <img src={negative} alt="Negative Test">
+    <img src={fig3_3} alt="Negative Test">
     <figcaption>Negative Test</figcaption>
   </figure>
 </div>
 
 <div class="comparison">
   <figure>
-    <img src={xaxisresults} alt="X-Axis Results">
+    <img src={fig4_1} alt="X-Axis Results">
     <figcaption>X-Axis Results</figcaption>
   </figure>
   <figure>
-    <img src={yaxisresults} alt="Y-Axis Results">
+    <img src={fig4_2} alt="Y-Axis Results">
     <figcaption>Y-Axis Results</figcaption>
   </figure>
   <figure>
-    <img src={zaxisresults} alt="Z-Axis Results">
+    <img src={fig4_3} alt="Z-Axis Results">
     <figcaption>Z-Axis Results</figcaption>
   </figure>
 </div>
@@ -121,58 +167,326 @@ Next, we perform a test on each sample. Three slices happen to test positive.
 Finally, with these nine tests, we can tell which sample is positive by seeing where the positive slices overlap.
 
 <div class="comparison">
-  <img src={xoverlap} alt="X-Axis Overlap">
-  <img src={yoverlap} alt="Y-Axis Overlap">
+  <figure>
+    <img src={fig5_1} alt="X-Axis Cuts">
+    <figcaption>X-Axis Cuts</figcaption>
+  </figure>
+  <figure>
+    <img src={fig5_2} alt="Y-Axis Cuts">
+    <figcaption>Y-Axis Cuts</figcaption>
+  </figure>
+  <figure>
+    <img src={fig5_3} alt="Z-Axis Cuts">
+    <figcaption>Z-Axis Cuts</figcaption>
+  </figure>
 </div>
+
+<img class="alone" src={fig6} alt="Result">
 
 Using this geometric slicing strategy, we were able to test 27 people with only 9 tests. To curb the spread of COVID-19, a reduction in tests is critical. In Rwanda, where a test can cost a laboratory $50, stepping down from 27 tests to 9 can save $900.
 
-<img class="alone" src={result} alt="Result">
-
 ## Utilizing higher dimensions
-In three dimensions, a cube is defined by three coordinates: (x,y,z). Taking a slice is the same as setting one of these coordinates as a constant. For example, z = 0 represents the slice given by the xy-plane: (x,y,0). 
-This idea extrapolates to hypercubes — cubes in a dimension greater than three. A four-dimensional cube would be represented by the four coordinates (x,y,z,w). If we take a slice of this cube, we set one of the variables constant. 
+Although the rubik’s cube approach is efficient, a limitation of it is that it can only house 27 samples at a time. To increase its efficiency, something creative we can do is place the samples on a 4-dimensional cube — a hypercube. Constructing a hypercube is quite hard to wrap your head around, but I’ll try to keep it simple. 
+
+In the same way a 2-dimensional object is a series of 1-dimensional objects and a 3-dimensional object is a series of 2-dimensional objects, a 4-dimensional object is a series of 3-dimensional objects. 
+
+For example, a plane, which is 2-dimensional, is a combination of 3 lines, which are 1-dimensional objects. 
+
+<div class="comparison">
+  <img src={fig7} alt="Plane Slice">
+  <img src={fig7} alt="Plane Slice">
+  <img src={fig7} alt="Plane Slice">
+</div>
+
+<img class="alone" src={fig8} alt="Plane">
+
+A cube, which is 3-dimensional, is a combination of 3 planes.
+
+<div class="comparison">
+  <img src={fig8} alt="Cube Slice">
+  <img src={fig8} alt="Cube Slice">
+  <img src={fig8} alt="Cube Slice">
+</div>
+
+<img class="alone" src={fig1} alt="Plane">
+
+Therefore, a 4D hypercube, which is 4-dimensional, should be a combination of 3 cubes, which are 3-dimensional. Here, the <K>w</K> term denotes which subcube a sample is in.
+
+### W-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig1} alt="w=0">
+    <figcaption><K>w=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig1} alt="w=1">
+    <figcaption><K>w=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig1} alt="w=2">
+    <figcaption><K>w=2</K></figcaption>
+  </figure>
+</div>
+
+Because each cube individually contains 27 samples, the 4D cube will hold 3 times 27 samples, which is equal to 81 samples. 
+Now that we have our 4D hypercube, we can slice it in each principle direction just like how we would slice the 3D cube. To cut the cube in the x-axis, we will cut each cube individually in the x-axis and group together the slices to form the new rearranged cubes. 
 
 ### X-Axis Cuts
+<div class="comparison">
+  <img src={fig20} alt="Cut Cube">
+  <img src={fig20} alt="Cut Cube">
+  <img src={fig20} alt="Cut Cube">
+</div>
+<div class="comparison">
+  <figure>
+    <img src={fig18_1} alt="x=0">
+    <figcaption><K>x=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig18_2} alt="x=1">
+    <figcaption><K>x=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig18_3} alt="x=2">
+    <figcaption><K>x=2</K></figcaption>
+  </figure>
+</div>
 
-<img class="alone" src={hypercubes} alt="Hypercubes">
+The same thing can be done in the y-axis and z-axis. 
 
-If the four-dimensional cube has side lengths of three, we can fit 3<sup>4</sup>, or 81, samples on this cube.
+### Y-Axis Cuts
+<div class="comparison">
+  <img src={fig17} alt="Cut Cube">
+  <img src={fig17} alt="Cut Cube">
+  <img src={fig17} alt="Cut Cube">
+</div>
+<div class="comparison">
+  <figure>
+    <img src={fig18_1} alt="y=0">
+    <figcaption><K>y=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig18_2} alt="y=1">
+    <figcaption><K>y=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig18_3} alt="y=2">
+    <figcaption><K>y=2</K></figcaption>
+  </figure>
+</div>
+
+### Z-Axis Cuts
+<div class="comparison">
+  <img src={fig19} alt="Cut Cube">
+  <img src={fig19} alt="Cut Cube">
+  <img src={fig19} alt="Cut Cube">
+</div>
+<div class="comparison">
+  <figure>
+    <img src={fig18_1} alt="z=0">
+    <figcaption><K>z=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig18_2} alt="z=1">
+    <figcaption><K>z=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig18_3} alt="z=2">
+    <figcaption><K>z=2</K></figcaption>
+  </figure>
+</div>
 
 ## A trickier example
-
-Let’s now say that we now want to identify two positives in a group of 81 samples. We place the samples on a 4D hypercube and perform the first round of slice tests. We see that in each axis, two of the three slices test positive.
+Let’s now say that we now want to identify two positives in a group of 81 samples. We place the samples on a 4D hypercube and perform the first round of slice tests. We see that in each axis, two of the three slices test positive. 
 
 ### X-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_1} alt="x=0">
+    <figcaption><K>x=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="x=1">
+    <figcaption><K>x=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="x=2">
+    <figcaption><K>x=2</K></figcaption>
+  </figure>
+</div>
+
 ### Y-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_1} alt="y=0">
+    <figcaption><K>y=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="y=1">
+    <figcaption><K>y=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="y=2">
+    <figcaption><K>y=2</K></figcaption>
+  </figure>
+</div>
+
 ### Z-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_2} alt="z=0">
+    <figcaption><K>z=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="z=1">
+    <figcaption><K>z=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="z=2">
+    <figcaption><K>z=2</K></figcaption>
+  </figure>
+</div>
+
 ### W-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_2} alt="w=0">
+    <figcaption><K>w=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="w=1">
+    <figcaption><K>w=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="w=2">
+    <figcaption><K>w=2</K></figcaption>
+  </figure>
+</div>
 
 Notice that in each principal direction, two out of the three slices test positive. This is different from our 3D example because in that example, only one of three slices tested positive. To determine which samples test positive, another round of testing is needed. The other positive is found by elimination. 
-To find the first positive sample, we take one of the slices and slice it again. For instance, let’s take the cube (x,y,z,1). 
+To find the first positive sample, we take one of the slices and slice it again. For instance, let’s take the cube <K>w=1</K>
 
-### Slices of the cube (x,y,z,1)
+### Slices of the cube <K>w=1</K>
+<div class="comparison">
+  <figure>
+    <img src={fig21_1} alt="X-Axis Cuts">
+    <figcaption>X-Axis Cuts</figcaption>
+  </figure>
+  <figure>
+    <img src={fig21_2} alt="Y-Axis Cuts">
+    <figcaption>Z-Axis Cuts</figcaption>
+  </figure>
+  <figure>
+    <img src={fig21_3} alt="Z-Axis Cuts">
+    <figcaption>Z-Axis Cuts</figcaption>
+  </figure>
+</div>
 
-We see that sample (1,2,2,1) tests positive. With this information, we can update our previous slices by removing the known positive.
+<img class="alone" src={fig22} alt="Positive Sample">
+
+We see that sample which corresponds to the slices <K>x=1</K>, <K>y=2</K>, <K>z=2</K> and <K>w=1</K> tests positive. With this information, we can update our previous slices by removing the known positive.
 
 ### X-Axis Cuts
-### Y-Axis Cuts
-### Z-Axis Cuts
-### W-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_1} alt="x=0">
+    <figcaption><K>x=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="x=1">
+    <figcaption><K>x=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="x=2">
+    <figcaption><K>x=2</K></figcaption>
+  </figure>
+</div>
 
-By seeing where the slices intersect, we see that the remaining positive is at the coordinate (0,0,1,2).
+### Y-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_1} alt="y=0">
+    <figcaption><K>y=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="y=1">
+    <figcaption><K>y=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="y=2">
+    <figcaption><K>y=2</K></figcaption>
+  </figure>
+</div>
+
+### Z-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_2} alt="z=0">
+    <figcaption><K>z=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="z=1">
+    <figcaption><K>z=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="z=2">
+    <figcaption><K>z=2</K></figcaption>
+  </figure>
+</div>
+
+### W-Axis Cuts
+<div class="comparison">
+  <figure>
+    <img src={fig11_2} alt="w=0">
+    <figcaption><K>w=0</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_2} alt="w=1">
+    <figcaption><K>w=1</K></figcaption>
+  </figure>
+  <figure>
+    <img src={fig11_1} alt="w=2">
+    <figcaption><K>w=2</K></figcaption>
+  </figure>
+</div>
+
+By seeing where the slices intersect, we see that the remaining positive is at slices <K>x=0</K>, <K>y=0</K>, <K>z=1</K>, and <K>w=2</K>. 
+
+<img class="alone" src={fig23} alt="Positive Sample">
 
 In total, we screened 81 samples with 21 tests, a significant improvement!
 
-
 ## Applying this to the real world
 
-Pooled testing has the potential to reduce COVID-19 caseload significantly. Cornell Professor Peter Frazier estimates that if the entire U.S. population was tested in a four-week period, then the COVID-19 prevalence rate [would drop to 0.3%, allowing 90% of adults to return to work](https://docs.google.com/document/d/1hw5K5V7XOug_r6CQ0UYt25szQxXFPmZmFhK15ZpH5U0/edit?ts=5e934170).
+Pooled testing has the potential to reduce COVID-19 caseload significantly. Cornell Professor Peter Frazier estimates that if the entire U.S. population was tested in a four-week period, then the COVID-19 prevalence rate [would drop to 0.3%, allowing 90% of adults to return to work](https://docs.google.com/document/d/1hw5K5V7XOug_r6CQ0UYt25szQxXFPmZmFhK15ZpH5U0/edit?ts=5e934170). 
 
  To demonstrate how efficient geometric pooled testing, let’s use Cornell as an example. 
-On Nov. 13, Cornell saw a spike in COVID-19 cases [due to several social gatherings](https://covid.cornell.edu/updates/20201112-increase-covid-19-cases.cfm). Out of 5,990 people tested that day, 9 tests came back positive. With Cornell’s naive pooling method, the 5,990 samples would first be split up into 65 pools of 93 samples each. Each pool would then be tested for COVID-19. If the pool tests positive, each of the 93 samples is then tested individually to identify the infected individuals. Based on the prevalence rate, on average, about 8.39 out of the 65 pools would test positive. On average, 65 + 8.39(93), or 845, tests would be performed. 
+On Nov. 13, Cornell saw a spike in COVID-19 cases [due to several social gatherings](https://covid.cornell.edu/updates/20201112-increase-covid-19-cases.cfm). Out of 5,990 people tested that day, 9 tests came back positive. With Cornell’s naive pooling method, the 5,990 samples would first be split up into 65 pools of 93 samples each. Each pool would then be tested for COVID-19. If the pool tests positive, each of the 93 samples is then tested individually to identify the infected individuals. Based on the prevalence rate, about 8.39 out of the 65 pools would test positive. On average, 
+<K displayMode>
+65 + 8.39(93) = 845
+</K>
 
-Instead of naive pooling, let’s now try the geometric pooling method. First, we split the 5,990 samples onto 74 4D hypercubes with length 3. Each hypercube holds 81 samples. In the first round of testing, each hypercube is tested as a whole. On average, 8.35 hypercubes test positive. 99.1% of the time, each positive hypercube only contains 1 positive sample. In this case, 12 tests are performed. The other 0.9% of the time, the hypercube contains 2 positive samples. Here, 21 tests would be needed. There is also the extreme case that each hypercube contains 3 or more positive samples, but the probability of that occurring is negligible. Taking a weighted average of these probabilities, the expected number of testes required per positive cube is 99.1%(12) + (0.09%)21 = 12.081 tests. Therefore, our total number of tests required is on average, 74 + 8.35(12.081) = 175 tests. We see that geometric pooling requires 4.83x fewer tests than naive pooling!
+tests would be performed. 
+
+Instead of naive pooling, let’s now try the geometric pooling method. First, we split the 5,990 samples onto 74 4D hypercubes with length 3. Each hypercube holds 81 samples.
+
+<img class="alone big" src={unknown} alt="81 Unknown Hypercubes">
+
+In the first round of testing, each hypercube is tested as a whole. On average, 8.35 hypercubes test positive.
+
+<img class="alone big" src={known} alt="81 Known Hypercubes">
+
+99.1% of the time, each positive hypercube only contains 1 positive sample. In this case, 12 tests are performed. The other 0.9% of the time, the hypercube contains 2 positive samples. Here, 21 tests would be needed. There is also the extreme case that each hypercube contains 3 or more positive samples, but the probability of that occurring is negligible. Taking a weighted average of these probabilities, the expected number of testes required per positive cube is
+<K displayMode>
+(99.1\%)(12) + (0.09\%)(21) = 12.081 
+</K>
+
+tests. Therefore, our total number of tests required is on average, 
+<K displayMode>
+74 + (8.35)(12.081) = 175 
+</K>
+
+tests. We see that geometric pooling requires <K>4.83\times</K> fewer tests than naive pooling!
 
 If pooled testing is so efficient, why aren’t more countries adopting it? In reality, pooling is tough. It’s easy to imagine how mistakes can be made when sorting pooling by hand. Also, with how sensitive the COVID-19 tests are, pooling may increase the rate of false positives or negatives. 
 
