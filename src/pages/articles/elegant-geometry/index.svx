@@ -78,11 +78,10 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
     place-items: center;
   }
   .comparison {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
     margin: 2rem 0;
-    grid-gap: 4rem;
+    justify-content: space-around;
   }
 
   .alone {
@@ -453,6 +452,7 @@ We see that sample which corresponds to the slices <K>x=1</K>, <K>y=2</K>, <K>z=
 By seeing where the slices intersect, we see that the remaining positive is at slices <K>x=0</K>, <K>y=0</K>, <K>z=1</K>, and <K>w=2</K>. 
 
 <img class="alone" src={fig23} alt="Positive Sample">
+<p style="text-align: center;">The positive sample on cube <K>w=2</K></p>
 
 In total, we screened 81 samples with 21 tests, a significant improvement!
 
