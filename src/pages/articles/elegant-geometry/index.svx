@@ -211,8 +211,8 @@ A cube, which is 3-dimensional, is a combination of 3 planes.
 
 Therefore, a 4D hypercube, which is 4-dimensional, should be a
 combination of 3 cubes, which are 3-dimensional. Here, the <K>w</K>
-term denotes which cube of the 4D cube a sample is in. To illustrate, this is a 4D
-cube that has been sliced in the <K>w</K>-axis. 
+term denotes which cube of the 4D cube a sample is in. To illustrate,
+this is a 4D cube that has been sliced in the w-axis. 
 
 ### W-Axis Cuts
 <div class="comparison">
@@ -231,7 +231,10 @@ cube that has been sliced in the <K>w</K>-axis.
 </div>
 
 Because each cube individually contains 27 samples, the 4D cube will hold 3 times 27 samples, which is equal to 81 samples. 
-Now that we have our 4D hypercube, we can slice it in each principle direction just like how we would slice the 3D cube. To cut the cube in the x-axis, we will cut each cube individually along the x-axis and group together the slices to form the new rearranged cubes. 
+Now that we have our 4D hypercube, we can slice it along each axis
+just like how we would slice the 3D cube. By mixing and matching the
+samples on the hypercube, we can test each slice individually and see
+where the positives overlap. To cut the cube in the x-axis, we will cut each cube individually along the x-axis and group together the slices to form the new rearranged cubes. 
 
 ### X-Axis Cuts
 <div class="comparison">
