@@ -78,11 +78,10 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
     place-items: center;
   }
   .comparison {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
     margin: 2rem 0;
-    grid-gap: 4rem;
+    justify-content: space-around;
   }
 
   .alone {
@@ -99,7 +98,7 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
 # {title}
 
 Due to a strict lockdown and some tech savvy solutions, Rwanda has remarkably been able to keep its COVID-19 prevalence low. Up until Dec. 16, the Rwanda Biomedical Center has reported 7,032 cases in the country. Pennsylvania, which has a similar population of 12.5 million, has reported 481,819 cases.
-Part of the reason Rwanda has been so successful in preventing the spread of COVID-19 is because of severe action from the government. As reported by the Wall Street Journal, over 70,000 people have been arrested for social distancing infractions.  
+Part of the reason Rwanda has been so successful in preventing the spread of COVID-19 is because of severe action from the government. [As reported by the Wall Street Journal](https://www.wsj.com/articles/rwandas-aggressive-approach-to-covid-wins-plauditsand-warnings-11601372482), over 70,000 people have been arrested for social distancing infractions.  
 But the country has also developed some innovative methods and technologies for dealing with COVID-19. Researchers at the University of Rwanda, for example, devised [a unique geometric method](https://www.nature.com/articles/s41586-020-2885-5) to reduce the number of COVID-19 tests needed. This powerful geometric method, also called pooled testing, is surprisingly elegant, and I’ll explain why.
 
 The way pooled testing works is simple. First, each patient is swabbed for COVID-19. These samples are combined into a single batch. If the batch tests negative, then each sample in the batch is COVID-19 negative. If the batch tests positive, each sample is then tested individually for COVID-19. 
@@ -140,12 +139,12 @@ Next, we perform a test on each sample. Three slices happen to test positive.
     <figcaption>Unknown</figcaption>
   </figure>
   <figure>
-    <img src={fig3_2} alt="Positive Test">
-    <figcaption>Positive Test</figcaption>
+    <img src={fig3_2} alt="Negative Test">
+    <figcaption>Negative Test</figcaption>
   </figure>
   <figure>
-    <img src={fig3_3} alt="Negative Test">
-    <figcaption>Negative Test</figcaption>
+    <img src={fig3_3} alt="Positive Test">
+    <figcaption>Positive Test</figcaption>
   </figure>
 </div>
 
@@ -377,7 +376,7 @@ To find the first positive sample, we take one of the slices and slice it again.
   </figure>
   <figure>
     <img src={fig21_2} alt="Y-Axis Cuts">
-    <figcaption>Z-Axis Cuts</figcaption>
+    <figcaption>Y-Axis Cuts</figcaption>
   </figure>
   <figure>
     <img src={fig21_3} alt="Z-Axis Cuts">
@@ -456,6 +455,7 @@ We see that sample which corresponds to the slices <K>x=1</K>, <K>y=2</K>, <K>z=
 By seeing where the slices intersect, we see that the remaining positive is at slices <K>x=0</K>, <K>y=0</K>, <K>z=1</K>, and <K>w=2</K>. 
 
 <img class="alone" src={fig23} alt="Positive Sample">
+<p style="text-align: center;">The positive sample on cube <K>w=2</K></p>
 
 In total, we screened 81 samples with 21 tests, a significant improvement!
 
