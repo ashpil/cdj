@@ -186,7 +186,7 @@ Finally, with these nine tests, we can tell which sample is positive by seeing w
 Using this geometric slicing strategy, we were able to test 27 people with only 9 tests. To curb the spread of COVID-19, a reduction in tests is critical. In Rwanda, where a test can cost a laboratory $50, stepping down from 27 tests to 9 can save $900.
 
 ## Utilizing higher dimensions
-Although the rubik’s cube approach is efficient, a limitation of it is that it can only house 27 samples at a time. To increase its efficiency, something creative we can do is place the samples on a 4-dimensional cube — a hypercube. Constructing a hypercube is quite hard to wrap your head around, but I’ll try to keep it simple. 
+Although the Rubik's cube approach is efficient, a limitation of it is that it can only house 27 samples at a time. To increase its efficiency, something creative we can do is place the samples on a 4-dimensional cube — a hypercube. Constructing a hypercube is quite hard to wrap your head around, but I’ll try to keep it simple. 
 
 In the same way a 2-dimensional object is a series of 1-dimensional objects and a 3-dimensional object is a series of 2-dimensional objects, a 4-dimensional object is a series of 3-dimensional objects. 
 
@@ -210,7 +210,10 @@ A cube, which is 3-dimensional, is a combination of 3 planes.
 
 <img class="alone" src={fig1} alt="Plane">
 
-Therefore, a 4D hypercube, which is 4-dimensional, should be a combination of 3 cubes, which are 3-dimensional. Here, the <K>w</K> term denotes which subcube a sample is in.
+Therefore, a 4D hypercube, which is 4-dimensional, should be a
+combination of 3 cubes, which are 3-dimensional. Here, the <K>w</K>
+term denotes which cube of the 4D cube a sample is in. To illustrate, this is a 4D
+cube that has been sliced in the <K>w</K>-axis. 
 
 ### W-Axis Cuts
 <div class="comparison">
@@ -229,7 +232,7 @@ Therefore, a 4D hypercube, which is 4-dimensional, should be a combination of 3 
 </div>
 
 Because each cube individually contains 27 samples, the 4D cube will hold 3 times 27 samples, which is equal to 81 samples. 
-Now that we have our 4D hypercube, we can slice it in each principle direction just like how we would slice the 3D cube. To cut the cube in the x-axis, we will cut each cube individually in the x-axis and group together the slices to form the new rearranged cubes. 
+Now that we have our 4D hypercube, we can slice it in each principle direction just like how we would slice the 3D cube. To cut the cube in the x-axis, we will cut each cube individually along the x-axis and group together the slices to form the new rearranged cubes. 
 
 ### X-Axis Cuts
 <div class="comparison">
@@ -490,7 +493,7 @@ tests. We see that geometric pooling requires <K>4.83\times</K> fewer tests than
 
 If pooled testing is so efficient, why aren’t more countries adopting it? In reality, pooling is tough. It’s easy to imagine how mistakes can be made when sorting pooling by hand. Also, with how sensitive the COVID-19 tests are, pooling may increase the rate of false positives or negatives. 
 
-Nonetheless, pooled testing has profound implications in other areas of research such as computer science. For instance, this group testing method can be used to rapidly find a broken lightbulb in a series of Christmas lights. In practice, group testing is used to locate incorrect bits in computer programs.  
+Nonetheless, pooled testing has profound implications in other areas of research such as computer science. For instance, this group testing method can be used to rapidly find a broken light bulb in a series of Christmas lights. In practice, group testing is used to locate incorrect bits in computer programs.  
 
 In Rwanda, the researchers are now developing software to automate the geometric pooling process. Although the process is still in its infancy, field trials have begun in the country. In South Africa, a rugby team has also begun to use the testing method to screen its players and staff. With a dramatic expansion in testing, hopefully, we can see an end to this pandemic soon. 
 
