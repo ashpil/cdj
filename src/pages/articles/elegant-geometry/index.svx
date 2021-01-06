@@ -56,6 +56,8 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
   import unknown from './_images/72_hypercubes_unknown.png';
   import known from './_images/72_hypercubes_known.png';
 
+  import dim_levels from './_images/Dimension_levels.svg';
+
   import K from '../../_components/Katex.svelte';
 
 </script>
@@ -187,9 +189,23 @@ Using this geometric slicing strategy, we were able to test 27 people with only 
 ## Utilizing higher dimensions
 Although the Rubik's cube approach is efficient, a limitation of it is that it can only house 27 samples at a time. To increase its efficiency, something creative we can do is place the samples on a 4-dimensional cube — a hypercube. Constructing a hypercube is quite hard to wrap your head around, but I’ll try to keep it simple. 
 
-In the same way a 2-dimensional object is a series of 1-dimensional objects and a 3-dimensional object is a series of 2-dimensional objects, a 4-dimensional object is a series of 3-dimensional objects. 
+Here are several graphs, each in a different dimension.
 
-For example, a plane, which is 2-dimensional, is a combination of 3 lines, which are 1-dimensional objects. 
+<img class="alone" src={dim_levels} alt="Graphs in different
+					 dimensions" width = "700px">
+<p style="text-align: center;">Source: Wikipedia</p>
+
+Informally, a graph is <K>n</K>-dimensional if each vertex has at least <K>n</K> adjacent vertices (neighbors) in <K>n</K> different directions.
+
+For example, in the illustration above, the plane is 2-dimensional. Each vertex has 2 neighbors in 2 directions: one to the right or left, and one above or below. Similarly, the cube is 3-dimensional because each of its vertices has 3 neighbors -- one in the <K>x</K>, <K>y</K>, and <K>z</K> directions.
+
+Therefore, it follows that in the 4D hypercube, each vertex should have 4 neighbors. To illustrate this, we can simply connect the vertices of 2 cubes. Each vertex has not only a neighbor in the <K>x</K>, <K>y</K>, and <K>z</K> directions, but also a neighbor in a new <K>w</K> direction. 
+
+To illustrate how this principle applies to pooled testing, let us represent the graphs above with our blocks. In the same way a 2D object is a series of 1D objects and a 3D object is a series of 2D objects, a 4D object is a series of 3D objects. 
+
+For example, a plane is a combination of 3 lines. The plane is 2D because each block has at least 2 neighbors in two directions: left or right, and front or back.
+
+
 
 <div class="comparison">
   <img src={fig7} alt="Plane Slice">
@@ -199,7 +215,9 @@ For example, a plane, which is 2-dimensional, is a combination of 3 lines, which
 
 <img class="alone" src={fig8} alt="Plane">
 
-A cube, which is 3-dimensional, is a combination of 3 planes.
+A cube is a combination of 3 planes stacked on top of each other. Each
+block now has a neighbor to the left or right, front or back, and
+above or below.
 
 <div class="comparison">
   <img src={fig8} alt="Cube Slice">
@@ -209,8 +227,8 @@ A cube, which is 3-dimensional, is a combination of 3 planes.
 
 <img class="alone" src={fig1} alt="Plane">
 
-Therefore, a 4D hypercube, which is 4-dimensional, should be a
-combination of 3 cubes, which are 3-dimensional. Here, the <K>w</K>
+Therefore, a 4D hypercube should be a
+combination of 3 cubes next to each other. Here, the <K>w</K>
 term denotes which cube of the 4D cube a sample is in. To illustrate,
 this is a 4D cube that has been sliced in the w-axis. 
 
@@ -368,7 +386,7 @@ Let’s now say that we now want to identify two positives in a group of 81 samp
   </figure>
 </div>
 
-Notice that in each principal direction, two out of the three slices test positive. This is different from our 3D example because in that example, only one of three slices tested positive. To determine which samples test positive, another round of testing is needed. The other positive is found by elimination. 
+Notice that in each direction, two out of the three slices test positive. This is different from our 3D example because in that example, only one of three slices tested positive. To determine which samples test positive, another round of testing is needed. The other positive is found by elimination. 
 To find the first positive sample, we take one of the slices and slice it again. For instance, let’s take the cube <K>w=1</K>
 
 ### Slices of the cube <K>w=1</K>
