@@ -5,9 +5,10 @@
   export let displayMode = false;
 
   let wrapper;
+  let content = "";
 
   onMount(() => {
-    wrapper.innerHTML = katex.renderToString(wrapper.innerHTML, { displayMode });
+    content = wrapper.textContent;
   });
 </script>
 
@@ -15,5 +16,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 </svelte:head>
 
-<span bind:this={wrapper}><slot /></span>
+<span bind:this={wrapper} hidden><slot /></span>
+
+{@html katex.renderToString(content, { displayMode })}
 
