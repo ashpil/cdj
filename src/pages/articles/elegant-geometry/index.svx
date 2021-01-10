@@ -6,7 +6,7 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
 ---
 
 <script>
-  import Wrapper from '../../_components/Wrapper.svelte'
+  import Wrapper from '../_components/Wrapper.svelte'
 
   import fig1 from './_images/fig1.png';
 
@@ -56,7 +56,7 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
   import unknown from './_images/72_hypercubes_unknown.png';
   import known from './_images/72_hypercubes_known.png';
 
-  import K from '../../_components/Katex.svelte';
+  import K from '../_components/Katex.svelte';
 
 </script>
 

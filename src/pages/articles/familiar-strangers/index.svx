@@ -5,7 +5,7 @@ authors: [Dana Gong, Megan Rochlin]
 ---
 
 <script>
-  import Wrapper from '../../_components/Wrapper.svelte';
+  import Wrapper from '../_components/Wrapper.svelte';
   import subreddit from './_images/subreddit.png';
   import regularity from './_images/regularity.png';
 </script>

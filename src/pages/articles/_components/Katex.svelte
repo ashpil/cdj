@@ -5,7 +5,7 @@
   export let displayMode = false;
 
   let wrapper;
-  let content = "";
+  let content = '';
 
   onMount(() => {
     content = wrapper.textContent;
