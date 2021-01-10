@@ -2,8 +2,8 @@
     import { metatags, layout, ready } from '@roxi/routify';
     import { setContext } from 'svelte';
     import Intro from './_components/Intro.svelte';
-    import ArticleBig from './_components/ArticleBig.svelte';
-    import ArticleSmall from './_components/ArticleSmall.svelte';
+    import ArticleBig from './_components/index/ArticleBig.svelte';
+    import ArticleSmall from './_components/index/ArticleSmall.svelte';
 
     const blurb = 'offering data-driven perspectives on current events, academics, politics, and beyond.';
 
