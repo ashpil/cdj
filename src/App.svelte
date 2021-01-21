@@ -5,6 +5,7 @@
 
 <style global>
   @import 'assets/styles/typography.scss';
+  @import 'assets/styles/tippy.scss';
 
   body {
     margin: 0;

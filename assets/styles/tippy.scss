@@ -1,0 +1,229 @@
+$namespace-prefix: 'tippy';
+$arrow-size: 16px;
+
+.#{$namespace-prefix}-box {
+  &[data-animation='fade'][data-state='hidden'] {
+    opacity: 0;
+  }
+}
+
+[data-#{$namespace-prefix}-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.#{$namespace-prefix}-box {
+  position: relative;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+
+  &[data-placement^='top'] > .#{$namespace-prefix}-arrow {
+    bottom: 0;
+
+    &::before {
+      bottom: -7px;
+      left: 0;
+      border-width: 8px 8px 0;
+      border-top-color: initial;
+      transform-origin: center top;
+    }
+  }
+
+  &[data-placement^='bottom'] > .#{$namespace-prefix}-arrow {
+    top: 0;
+
+    &::before {
+      top: -7px;
+      left: 0;
+      border-width: 0 8px 8px;
+      border-bottom-color: initial;
+      transform-origin: center bottom;
+    }
+  }
+
+  &[data-placement^='left'] > .#{$namespace-prefix}-arrow {
+    right: 0;
+
+    &::before {
+      border-width: 8px 0 8px 8px;
+      border-left-color: initial;
+      right: -7px;
+      transform-origin: center left;
+    }
+  }
+
+  &[data-placement^='right'] > .#{$namespace-prefix}-arrow {
+    left: 0;
+
+    &::before {
+      left: -7px;
+      border-width: 8px 8px 8px 0;
+      border-right-color: initial;
+      transform-origin: center right;
+    }
+  }
+
+  &[data-inertia][data-state='visible'] {
+    transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+  }
+}
+
+.#{$namespace-prefix}-arrow {
+  & {
+    width: $arrow-size;
+    height: $arrow-size;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    border-color: transparent;
+    border-style: solid;
+  }
+}
+
+.#{$namespace-prefix}-content {
+  position: relative;
+  padding: 5px 9px;
+  z-index: 1;
+}
+
+$color: white;
+$transparent-light: rgba(0, 8, 16, 0.08);
+
+.#{$namespace-prefix}-box {
+  background-color: $color;
+  background-clip: padding-box;
+  color: #333;
+  box-shadow: 0px 2px 6px -2px $transparent-light;
+
+  > .#{$namespace-prefix}-backdrop {
+    background-color: $color;
+  }
+
+  > .#{$namespace-prefix}-arrow,
+  > .#{$namespace-prefix}-svg-arrow {
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  > .#{$namespace-prefix}-arrow::after {
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  &[data-placement^='top'] {
+    > .#{$namespace-prefix}-arrow {
+      &::before {
+        border-top-color: $color;
+      }
+
+      &::after {
+        border-width: 7px 7px 0;
+        top: $arrow-size + 1;
+        left: 1px;
+      }
+    }
+
+    > .#{$namespace-prefix}-svg-arrow {
+      > svg {
+        top: $arrow-size;
+      }
+
+      &::after {
+        top: $arrow-size + 1;
+      }
+    }
+  }
+
+  &[data-placement^='bottom'] {
+    > .#{$namespace-prefix}-arrow {
+      &::before {
+        border-bottom-color: $color;
+        bottom: $arrow-size;
+      }
+
+      &::after {
+        border-width: 0 7px 7px;
+        bottom: $arrow-size + 1;
+        left: 1px;
+      }
+    }
+
+    > .#{$namespace-prefix}-svg-arrow {
+      > svg {
+        bottom: $arrow-size;
+      }
+
+      &::after {
+        bottom: $arrow-size + 1;
+      }
+    }
+  }
+
+  &[data-placement^='left'] {
+    > .#{$namespace-prefix}-arrow {
+      &::before {
+        border-left-color: $color;
+      }
+
+      &::after {
+        border-width: 7px 0 7px 7px;
+        left: $arrow-size + 1;
+        top: 1px;
+      }
+    }
+
+    > .#{$namespace-prefix}-svg-arrow {
+      > svg {
+        left: 11px;
+      }
+
+      &::after {
+        left: 12px;
+      }
+    }
+  }
+
+  &[data-placement^='right'] {
+    > .#{$namespace-prefix}-arrow {
+      &::before {
+        border-right-color: $color;
+        right: $arrow-size;
+      }
+
+      &::after {
+        border-width: 7px 7px 7px 0;
+        right: $arrow-size + 1;
+        top: 1px;
+      }
+    }
+
+    > .#{$namespace-prefix}-svg-arrow {
+      > svg {
+        right: 11px;
+      }
+
+      &::after {
+        right: 12px;
+      }
+    }
+  }
+
+  > .#{$namespace-prefix}-svg-arrow {
+    fill: white;
+
+    &::after {
+      background-size: $arrow-size 6px;
+      width: $arrow-size;
+      height: 6px;
+    }
+  }
+}
+
