@@ -5,9 +5,9 @@
     export let blurb;
 
     const links = [
-      ['/about', 'about'],
-      ['/get_involved', 'get involved'],
-      ['/learn', 'learn'],
+//      ['/about', 'about'],
+//      ['/get_involved', 'get involved'],
+//      ['/learn', 'learn'],
     ];
 
     let windowWidth;
