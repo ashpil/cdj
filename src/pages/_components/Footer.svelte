@@ -35,7 +35,7 @@
     <a href="https://www.facebook.com/cornelldatajournal/">
       <img src="/socials/facebook.svg" alt="Facebook">
     </a>
-    <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-hjvlv5lu-U4gYfTE2~k68TovW331HEA">
+    <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-mb391cgl-yqsPnKf6IptzobNInf~y0Q">
       <img src="/socials/slack.svg" alt="Slack">
     </a>
     <a href="https://www.linkedin.com/company/cornell-data-journal/">
