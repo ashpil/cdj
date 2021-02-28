@@ -5,7 +5,7 @@
     export let blurb;
 
     const links = [
-//      ['/about', 'about'],
+      ['/about', 'about'],
 //      ['/get_involved', 'get involved'],
 //      ['/learn', 'learn'],
     ];

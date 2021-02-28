@@ -1,6 +1,6 @@
 <!-- routify:options frontmatter= { 
-  "title": "Wings of Change",
-  "description": "The Effects of Climate Change on Migratory Birds",
+  "title": "The Effects of Climate Change on Migratory Birds",
+  "description": "Meet the Wood Thrush. Smaller than a Robin, the Wood Thrush makes its home throughout the forests of the Eastern United States.",
   "authors": [ "Annie Fu", "Jennifer Russell", "Daniel Sanderson" ]
 } -->
 

@@ -15,7 +15,7 @@
       z-index: 1;
       border: 2px solid black;
       background-color: white;
-      max-height: 17rem;
+      height: 17rem;
       transition: border 200ms ease;
       overflow: hidden;
     }
