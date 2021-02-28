@@ -6,6 +6,10 @@
 <style global>
   @import 'assets/styles/typography.scss';
 
+  html {
+    overflow-y: scroll;
+  }
+
   body {
     margin: 0;
     box-sizing: border-box;

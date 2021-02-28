@@ -14,6 +14,10 @@
     a {
       width: 3rem;
       margin: 1.5rem;
+      transition: filter 100ms;
+      &:hover {
+        filter: invert(14%) sepia(45%) saturate(5583%) hue-rotate(237deg) brightness(85%) contrast(90%);
+      }
     }
   }
 

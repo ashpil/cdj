@@ -65,7 +65,7 @@
     nav {
       grid-area: nav;
       align-self: center;
-      justify-self: end;
+      justify-self: center;
       #links {
         display: grid;
         grid-template-columns: auto auto auto;

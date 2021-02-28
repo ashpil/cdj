@@ -41,7 +41,7 @@ a {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 33px;
 }
 
 h2 {
@@ -56,3 +56,8 @@ p {
   font-size: 20px;
 }
 
+@media only screen and (max-width: $mobile-cutoff-xs) {
+  p {
+    font-size: 19px;
+  }
+}

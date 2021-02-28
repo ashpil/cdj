@@ -1,6 +1,6 @@
 <style>
   header {
-    margin-bottom: 5rem;
+    margin: 1rem 0 3rem;
     a {
       display: flex;
       justify-content: center;
@@ -24,7 +24,7 @@
   }
   @media only screen and (max-width: $mobile-cutoff) {
     header {
-      margin-bottom: 2rem;
+      margin: 0.5rem 0;
     }
   }
 </style>

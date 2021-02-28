@@ -98,7 +98,9 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
 # {title}
 
 Due to a strict lockdown and some tech savvy solutions, Rwanda has remarkably been able to keep its COVID-19 prevalence low. Up until Dec. 16, the Rwanda Biomedical Center has reported 7,032 cases in the country. Pennsylvania, which has a similar population of 12.5 million, has reported 481,819 cases.
+
 Part of the reason Rwanda has been so successful in preventing the spread of COVID-19 is because of severe action from the government. [As reported by the Wall Street Journal](https://www.wsj.com/articles/rwandas-aggressive-approach-to-covid-wins-plauditsand-warnings-11601372482), over 70,000 people have been arrested for social distancing infractions.  
+
 But the country has also developed some innovative methods and technologies for dealing with COVID-19. Researchers at the University of Rwanda, for example, devised [a unique geometric method](https://www.nature.com/articles/s41586-020-2885-5) to reduce the number of COVID-19 tests needed. This powerful geometric method, also called pooled testing, is surprisingly elegant, and I’ll explain why.
 
 The way pooled testing works is simple. First, each patient is swabbed for COVID-19. These samples are combined into a single batch. If the batch tests negative, then each sample in the batch is COVID-19 negative. If the batch tests positive, each sample is then tested individually for COVID-19. 
