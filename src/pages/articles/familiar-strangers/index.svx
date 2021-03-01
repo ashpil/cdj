@@ -2,6 +2,7 @@
 title: On Strangers and Loneliness
 description: Examining the role Familiar Strangers in our daily lives.
 authors: [Dana Gong, Megan Rochlin]
+date: Dec. 18 2020
 ---
 
 <script>
@@ -19,8 +20,6 @@ authors: [Dana Gong, Megan Rochlin]
 </style>
 
 <Wrapper>
-
-# {title}
 
 “Familiar Strangers form a border zone between people we know and the completely unknown strangers we encounter once and never see again. While we are bound to the people we know by a circle of social reciprocity, no such bond exists between us and complete strangers. Familiar Strangers buffer the middle ground between these two relationships. Because we encounter them regularly in familiar settings, they establish our connection to individual places.”
 

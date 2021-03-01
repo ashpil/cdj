@@ -30,7 +30,7 @@
     display: grid;
     grid-template:
       [row1-start] "title nav" 1fr [row1-end]
-      [row2-start] "desc ." auto [row2-end]
+      [row2-start] "desc nav" auto [row2-end]
       / 2fr 1fr;
     margin: 3rem auto;
     max-width: $max-width;

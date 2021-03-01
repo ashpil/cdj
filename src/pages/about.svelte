@@ -19,10 +19,11 @@
     }
     h2 {
       color: $blue;
-      margin: 0.5em 0;
+      margin: 1em 0;
     }
-    p {
-      margin-bottom: 4rem;
+    iframe {
+      width: 100%;
+      border: 0;
     }
   }
 </style>
@@ -32,5 +33,7 @@
 <div>
   <h2>Who are we?</h2>
   <p><b>Cornell Data Journal</b> was founded in Fall of 2020 by a group of Cornell students seeking to foster a data journalism community on campus. Serving as multifaceted platform for publishing creative projects, providing educational workshops, and networking with industry professionals, the club is a space for data-driven student developers and writers to grow. We're currently accepting new members for spring 2021. Coders, designers, writers, or students interested in data journalism are welcome to apply using <a href="https://forms.gle/PszDVR3h1pznsNGu9">this link</a>.</p>
+  <h2>Events</h2>
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23f3ecf2&amp;ctz=America%2FNew_York&amp;src=Y29ybmVsbGRhdGFqb3VybmFsQGdtYWlsLmNvbQ&amp;color=%237CB342&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA" height="600" scrolling="no" title="CDJ Event Calendar"></iframe>
 </div>
 

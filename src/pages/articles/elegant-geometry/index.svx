@@ -3,6 +3,7 @@ featured: true
 title: The Elegant Geometry Behind Rwanda’s COVID-19 Pooled Testing Strategy
 description: Drawing inspiration from multidimensional geometry, scientists from the University of Rwanda have a devised a method to dramatically increase the nation's COVID-19 testing capacity.
 authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
+date: Dec. 18 2020
 ---
 
 <script>
@@ -94,8 +95,6 @@ authors: [Eric Chen, Medha Bulumulla, Megan Rochlin]
 </style>
 
 <Wrapper>
-
-# {title}
 
 Due to a strict lockdown and some tech savvy solutions, Rwanda has remarkably been able to keep its COVID-19 prevalence low. Up until Dec. 16, the Rwanda Biomedical Center has reported 7,032 cases in the country. Pennsylvania, which has a similar population of 12.5 million, has reported 481,819 cases.
 
