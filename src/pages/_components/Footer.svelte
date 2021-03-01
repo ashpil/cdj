@@ -18,6 +18,9 @@
       &:hover {
         filter: brightness(130%);
       }
+      img {
+        border-radius: 1px;
+      }
     }
   }
 

@@ -30,7 +30,7 @@
     display: grid;
     grid-template:
       [row1-start] "title nav" 1fr [row1-end]
-      [row2-start] "desc nav" auto [row2-end]
+      [row2-start] "desc ." auto [row2-end]
       / 2fr 1fr;
     margin: 3rem auto;
     max-width: $max-width;
@@ -64,14 +64,14 @@
     }
     nav {
       grid-area: nav;
-      align-self: center;
+      align-self: end;
       justify-self: center;
       #links {
         display: grid;
         grid-template-columns: auto auto auto;
         place-items: center;
         a {
-          padding: 1rem;
+          padding: 1.75rem 1rem;
           color: $purple;
           font-family: $font-secondary;
           font-weight: 900;
