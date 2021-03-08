@@ -48,6 +48,9 @@
     <a href="https://www.linkedin.com/company/cornell-data-journal/">
       <img src="/socials/linkedin.svg" alt="LinkedIn">
     </a>
+    <a href="https://twitter.com/c_datajournal">
+      <img src="/socials/twitter.svg" alt="Twitter">
+    </a>
   </div>
 </footer>
 
