@@ -62,10 +62,29 @@
       grid-area: desc;
       font-family: $font-primary;
     }
+    #socials-top {
+      justify-self: end;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 0.4rem;
+      a {
+        width: 2.1rem;
+        padding: 0 0.6rem;
+        transition: filter 100ms;
+        filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(91%) contrast(90%);
+        &:hover {
+          filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(130%) contrast(90%);
+        }
+      }
+      img {
+        height: 100%;
+        border-radius: 1px;
+      }
+    }
     nav {
       grid-area: nav;
       align-self: end;
-      justify-self: center;
+      justify-self: end;
       #links {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -165,10 +184,17 @@
         padding: 0 1rem;
         #links {
           display: block;
-          margin: 0.5rem 0 1rem 0;
+          margin: 0.5rem 0;
           a {
             display: block;
             padding: 0.5rem 0;
+          }
+        }
+        #socials-top {
+          justify-content: flex-start;
+          padding: 1rem 0;
+          a:first-child {
+            padding-left: 0;
           }
         }
       }
@@ -215,14 +241,54 @@
       </div>
     {/if}
     {#if opened}
-      <div id="links" transition:slideIfMobile|local>
-        {#each links as [path, name]}
-          <a href={$url(path)} class:active={$isActive(path)}>
-            {name}
-          </a>
-        {/each}
+      <div transition:slideIfMobile|local>
+        <div id="links">
+          {#each links as [path, name]}
+            <a href={$url(path)} class:active={$isActive(path)}>
+              {name}
+            </a>
+          {/each}
+        </div>
+        {#if windowWidth <= 950}
+          <div id="socials-top">
+            <a href="https://www.instagram.com/cornelldatajournal/">
+              <img src="/socials/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/cornelldatajournal/">
+              <img src="/socials/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-mb391cgl-yqsPnKf6IptzobNInf~y0Q">
+              <img src="/socials/slack.svg" alt="Slack">
+            </a>
+            <a href="https://www.linkedin.com/company/cornell-data-journal/">
+              <img src="/socials/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://twitter.com/c_datajournal">
+              <img src="/socials/twitter.svg" alt="Twitter">
+            </a>
+          </div>
+        {/if}
       </div>
     {/if}
   </nav>
+  {#if windowWidth > 950}
+    <div id="socials-top">
+      <a href="https://www.instagram.com/cornelldatajournal/">
+        <img src="/socials/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/cornelldatajournal/">
+        <img src="/socials/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-mb391cgl-yqsPnKf6IptzobNInf~y0Q">
+        <img src="/socials/slack.svg" alt="Slack">
+      </a>
+      <a href="https://www.linkedin.com/company/cornell-data-journal/">
+        <img src="/socials/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com/c_datajournal">
+        <img src="/socials/twitter.svg" alt="Twitter">
+      </a>
+    </div>
+  {/if}
 </div>
 

@@ -15,8 +15,9 @@
       width: 3rem;
       padding: 1.5rem;
       transition: filter 100ms;
+      filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(91%) contrast(90%);
       &:hover {
-        filter: brightness(130%);
+        filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(130%) contrast(90%);
       }
       img {
         border-radius: 1px;
