@@ -47,7 +47,7 @@
       position: relative;
       top: 0;
       left: 0;
-      transition: top 0.4s, left 0.4s;
+      transition: top 0.25s, left 0.25s;
     }
     .highlight {
       position: absolute;
@@ -58,7 +58,7 @@
       left: 5%;
       z-index: -1;
       background-color: white;
-      transition: top 0.4s, left 0.4s;
+      transition: top 0.25s, left 0.25s;
       p {
         font-size: 16px;
         margin: 1em;
@@ -96,12 +96,12 @@
   }
   .out {
     .highlight {
-      left: 25% !important;
-      top: 25% !important;
+      left: 15% !important;
+      top: 15% !important;
     }
     .img {
-      left: -25%;
-      top: -25%;
+      left: -15%;
+      top: -15%;
     }
   }
 </style>
