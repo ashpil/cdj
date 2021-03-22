@@ -1151,6 +1151,7 @@
       <p><strong>M</strong>eet the <b>Wood Thrush</b>. Smaller than a Robin, the Wood Thrush makes its home throughout the forests of the Eastern United States.</p>
       <p>While the birds aren’t frequently seen in urbanized areas, their singsong nature would be recognizable to most who’ve spent time hiking or live near a wooded area: </p>
       <p class="credit">
+      <!-- svelte-ignore a11y-media-has-caption -->
         <audio controls>
           <source src={thrushCall} type="audio/mpeg">
           Your browser does not support the audio element.

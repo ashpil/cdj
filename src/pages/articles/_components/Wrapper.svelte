@@ -1,11 +1,10 @@
 <script>
+  import { page, metatags } from '@roxi/routify';
   import Header from './Header.svelte';
   import Footer from '../../_components/Footer.svelte';
-  import { page, metatags } from '@roxi/routify';
 
-  const title = $page.meta.frontmatter.title;
-  const date = $page.meta.frontmatter.date;
-  const authors = $page.meta.frontmatter.authors.join(", ");
+  const { title, date } = $page.meta.frontmatter;
+  const authors = $page.meta.frontmatter.authors.join(', ');
 
   metatags.title = `${title} | CDJ`;
   metatags.description = $page.meta.frontmatter.description;
