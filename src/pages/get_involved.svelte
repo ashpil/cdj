@@ -8,9 +8,20 @@
     metatags.title = 'Get Involved | CDJ';
     metatags.description = blurb;
 </script>
+<style>
+    div {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  iframe {
+      width: 100%;
+      border: 0;
+    }
+</style>
 
 <Intro {blurb} />
-
 
 
 <div>
