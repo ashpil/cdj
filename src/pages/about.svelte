@@ -34,7 +34,6 @@
 <Intro {blurb} />
 
 <div>
-
   <h2>What is Cornell Data Journal?</h2>
   <p>Founded in Fall 2020, <b>Cornell Data Journal</b> is an online investigative journalism publication featuring data visualization, data communication, and interdisciplinary research pieces.
     
