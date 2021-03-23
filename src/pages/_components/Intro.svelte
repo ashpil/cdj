@@ -6,7 +6,7 @@
 
     const links = [
       ['/about', 'about'],
-//      ['/get_involved', 'get involved'],
+      ['/get_involved', 'get involved'],
 //      ['/learn', 'learn'],
     ];
 
