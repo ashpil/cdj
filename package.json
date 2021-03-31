@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "CDJ",
   "version": "1.0.0",
   "@comments scripts": {
     "dev": "develop with blazing fast rebuilds",
@@ -18,6 +18,7 @@
     "build": "run-s build:*",
     "build:app": "routify -b && rollup -c",
     "build:static": "spank",
+    "build:rss": "node -r esm rss.js",
     "serve": "spassr --ssr",
     "rollup": "rollup -cw",
     "nollup": "nollup -c",
@@ -32,6 +33,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-svelte3": "^2.7.3",
+    "esm": "^3.2.25",
     "fs-extra": "^9.0.1",
     "mdsvex": "^0.8.8",
     "nollup": "^0.13.3",

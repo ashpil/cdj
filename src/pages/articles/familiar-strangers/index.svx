@@ -2,7 +2,7 @@
 title: On Strangers and Loneliness
 description: Examining the role Familiar Strangers in our daily lives.
 authors: [Dana Gong, Megan Rochlin]
-date: Dec. 18 2020
+date: December 18, 2020
 ---
 
 <script>

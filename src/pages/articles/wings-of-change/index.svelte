@@ -2,7 +2,7 @@
   "title": "The Effects of Climate Change on Migratory Birds",
   "description": "Meet the Wood Thrush. Smaller than a Robin, the Wood Thrush makes its home throughout the forests of the Eastern United States.",
   "authors": [ "Annie Fu", "Jennifer Russell", "Daniel Sanderson" ],
-  "date": "Dec. 18 2020"
+  "date": "December 18, 2020"
 } -->
 
 <script>

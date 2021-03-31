@@ -12,7 +12,7 @@ build()
 
 async function build() {
     if (shouldBuildSpa)
-        execSync('npm install && npm run build:app', { cwd: resolve('..', '..'), stdio: 'inherit' })
+        execSync('npm install && npm run build:app && npm run build:rss', { cwd: resolve('..', '..'), stdio: 'inherit' })
     else
         await waitForAppToExist()
 
