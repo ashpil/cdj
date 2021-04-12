@@ -1,11 +1,12 @@
 <script>
   export let name;
-  export let year;
-  export let position;
-  export let desc;
+  export let role;
+  export let minor;
+  export let major;
   export let color;
+  export let desc;
+  export let year;
 
-  let img;
   let highlight;
 
   let out = false;
@@ -37,19 +38,19 @@
     z-index: 2;
     img {
       border: 3px solid black;
-      height: 13rem;
+      height: 15rem;
       width: 15rem;
       object-fit: contain;
-      padding-top: 2rem;
       display: block;
-    }
-    .img {
       position: relative;
       top: 0;
       left: 0;
       transition: top 0.25s, left 0.25s;
     }
     .highlight {
+      display: flex;
+      justify-content: center; /* align horizontal */
+      align-items: center; /* align vertical */
       position: absolute;
       height: 100%;
       width: 100%;
@@ -60,8 +61,8 @@
       background-color: white;
       transition: top 0.25s, left 0.25s;
       p {
-        font-size: 16px;
-        margin: 1em;
+        font-size: 18px;
+        margin: 1.5em;
       }
     }
     h3 {
@@ -70,19 +71,6 @@
     }
     p {
       margin: 0.5em 0;
-    }
-    .over {
-      position: absolute;
-      top: 0;
-      padding: 1rem;
-      color: gray;
-      h4, p {
-        margin: 0;
-        font-size: 14px;
-      }
-      h4 {
-        font-family: $font-secondary;
-      }
     }
     .big {
       position: relative;
@@ -99,28 +87,34 @@
       left: 15% !important;
       top: 15% !important;
     }
-    .img {
+    img {
       left: -15%;
       top: -15%;
     }
+  }
+  b {
+    text-decoration: underline;
+    text-decoration-color: $yellow;
+    text-decoration-thickness: 2px;
+  }
+  i {
+    text-decoration: underline;
+    text-decoration-color: $steelblue;
+    text-decoration-thickness: 2px;
+    font-style: normal;
+    font-weight: bold;
   }
 </style>
 
 <div class="parent">
   <div on:mouseleave={reverse} on:mouseenter={start} class="big" class:out>
-    <div bind:this={img} class="img">
-      <img alt={name} src="/authors/backup.svg" style="background-color: {color}"/>
-      <div class="over">
-        <h4>{name.toUpperCase()}</h4>
-        <p>{position}</p>
-      </div>
-    </div>
+    <img src="/authors/{name.replace(' ', '_')}.png" on:error={e => e.target.src = "/authors/backup.svg"} alt={name} style="background-color: {color}">
     <div bind:this={highlight} class="highlight" on:transitionend={transitionEnd}>
-      <p>{desc}</p>
+      <p>Annie is a <i>Information Science</i> major and <i>English</i> minor. She drinks <b>4 cups of coffee</b> every day!</p>
     </div>
   </div>
   <div class="info">
-    <h3>{name}</h3>
-    <p>Class of '{year}</p>
+    <h3>{`${name} '${year}`}</h3>
+    <p>{role}</p>
   </div>
 </div>

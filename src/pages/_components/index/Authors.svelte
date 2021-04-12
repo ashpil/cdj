@@ -31,7 +31,7 @@
 <div class="authors">
   {#each authors as author, i}
     <span  data-tippy-content="{author}" class="author" style="background-color:{colors[i % colors.length]};">
-      <img src="authors/{author.replace(' ', '_')}.png" on:error={e => e.target.remove()} alt={author}>
+      <img src="/authors/low/{author.replace(' ', '_')}.png" on:error={e => e.target.remove()} alt={author}>
     </span>
   {/each}
 </div>

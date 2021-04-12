@@ -10,14 +10,15 @@
     metatags.description = blurb;
 
     const team = [
-      { name: 'Andrei Shpilenok', year: 23, position: 'Something', desc: 'HI! I am a person with a description' },
-      { name: 'Andrei Shpilenok', year: 23, position: 'Something', desc: 'HI! I am a person with a description' },
-      { name: 'Andrei Shpilenok', year: 23, position: 'Something', desc: 'HI! I am a person with a description' },
-      { name: 'Andrei Shpilenok', year: 23, position: 'Something', desc: 'HI! I am a person with a description' },
-      { name: 'Andrei Shpilenok', year: 23, position: 'Something', desc: 'HI! I am a person with a description' },
+      { name: 'Annie Fu', year: 21, role: 'Co-Editor in Chief', major: ['Information Science'], minor: ['English'], desc: 'Some sort of description', },
+      { name: 'Dana Gong', year: 22, role: 'Co-Editor in Chief', major: ['Information Science'], minor: ['PAM'], desc: 'Some sort of description', },
+      { name: 'Megan Rochlin', year: 21, role: 'Deputy Editor', major: ['Computer Science', 'English'], minor: ['Creative Writing', 'Medieval Studies'], desc: 'Some sort of description' },
+      { name: 'Andrei Shpilenok', year: 23, role: 'Web Developer', major: ['Computer Science'], minor: [], desc: 'Some sort of description' },
+      { name: 'Liying Wang', year: 22, role: 'Marketing/Graphics Editor', major: ['Information Science'], minor: ['Visual Studies', 'Business'], desc: 'Some sort of description' },
+      { name: 'Yun Mi Koh', year: 21, role: 'Marketing Lead', major: ['DEA'], minor: ['UX'], desc: 'Some sort of description' },
     ];
 
-    const colors = ['#A5BDDA', '#2D2D94', '#EAC428', '#672893'];
+    const colors = ['#A4BCD5', '#2C358B', '#F8C82D', '#642D89'];
 </script>
 
 <style>
@@ -43,7 +44,7 @@
   #team {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   @media only screen and (max-width: $mobile-cutoff) {
@@ -67,8 +68,8 @@
   </div>
   <h2>Meet the Team!</h2>
   <div id="team">
-    {#each team as { name, year, position, desc }, i}
-      <Person {name} {year} {position} {desc} color={colors[i % colors.length]}/>
+    {#each team as { name, year, role, minor, major, desc }, i}
+      <Person {name} {year} {role} {minor} {major} {desc} color={colors[i % colors.length]}/>
     {/each}
   </div>
 </main>
