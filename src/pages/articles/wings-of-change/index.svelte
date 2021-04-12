@@ -1,6 +1,6 @@
 <!-- routify:options frontmatter= { 
   "title": "The Effects of Climate Change on Migratory Birds",
-  "description": "Meet the Wood Thrush. Smaller than a Robin, the Wood Thrush makes its home throughout the forests of the Eastern United States.",
+  "description": "Meet the Wood Thrush. Smaller than a Robin, the Wood Thrush makes its home throughout the forests of the Eastern United States. Due to climate change, in recent years, the species has been forced to settle further North than ever before.",
   "authors": [ "Annie Fu", "Jennifer Russell", "Daniel Sanderson" ],
   "date": "December 18, 2020"
 } -->
