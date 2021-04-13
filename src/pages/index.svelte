@@ -44,6 +44,7 @@
 </style>
 
 <Intro {blurb}/>
+
 {#each articles.filter(article => article.featured) as article}
   <ArticleBig {article} />
 {/each}
@@ -53,4 +54,3 @@
     <ArticleSmall {article} />
   {/each}
 </div>
-

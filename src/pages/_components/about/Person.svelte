@@ -74,12 +74,11 @@
     }
     .big {
       position: relative;
-      margin: 3rem 0;
     }
     .info {
       position: relative;
       z-index: -2;
-      margin-left: 0.5rem;
+      margin: 3rem 0 3rem 0.5rem;
     }
   }
   .out {

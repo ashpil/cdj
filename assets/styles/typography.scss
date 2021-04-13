@@ -35,13 +35,13 @@ a {
   
   &:hover {
     text-decoration: underline;
-    text-decoration-color: $lightblue;
+    text-decoration-color: $yellow;
     text-decoration-thickness: 3px;
   }
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 33px;
 }
 
 h2 {
@@ -57,3 +57,8 @@ p {
   line-height: 1.4em;
 }
 
+@media only screen and (max-width: $mobile-cutoff-xs) {
+  p {
+    font-size: 19px;
+  }
+}

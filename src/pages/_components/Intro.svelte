@@ -1,26 +1,26 @@
 <script>
-    import { isActive, url } from '@roxi/routify';
-    import { slide } from 'svelte/transition';
+  import { isActive, url } from '@roxi/routify';
+  import { slide } from 'svelte/transition';
 
-    export let blurb;
+  export let blurb;
 
-    const links = [
-      ['/about', 'about'],
-      ['/get_involved', 'get involved'],
-      ['/learn', 'learn'],
-    ];
+  const links = [
+    ['/about', 'about'],
+    ['/get_involved', 'get involved'],
+    // ['/learn', 'learn'],
+  ];
 
-    let windowWidth;
+  let windowWidth;
 
-    let opened = false;
+  let opened = false;
 
-    $: if (windowWidth > 950) opened = true;
+  $: if (windowWidth > 950) opened = true;
 
-    function slideIfMobile(node, params) {
-      if (windowWidth <= 950) {
-        return slide(node, params);
-      }
+  function slideIfMobile(node, params) {
+    if (windowWidth <= 950) {
+      return slide(node, params);
     }
+  }
 </script>
 
 <style>
@@ -62,16 +62,37 @@
       grid-area: desc;
       font-family: $font-primary;
     }
+    #socials-top {
+      justify-self: end;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 0.4rem;
+      a {
+        width: 2.1rem;
+        padding: 0 0.6rem;
+        transition: filter 100ms;
+        filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg)
+          brightness(91%) contrast(90%);
+        &:hover {
+          filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg)
+            brightness(130%) contrast(90%);
+        }
+      }
+      img {
+        height: 100%;
+        border-radius: 1px;
+      }
+    }
     nav {
       grid-area: nav;
-      align-self: center;
+      align-self: end;
       justify-self: end;
       #links {
         display: grid;
         grid-template-columns: auto auto auto;
         place-items: center;
         a {
-          padding: 1rem;
+          padding: 1.75rem 1rem;
           color: $purple;
           font-family: $font-secondary;
           font-weight: 900;
@@ -165,10 +186,17 @@
         padding: 0 1rem;
         #links {
           display: block;
-          margin: 0.5rem 0 1rem 0;
+          margin: 0.5rem 0;
           a {
             display: block;
             padding: 0.5rem 0;
+          }
+        }
+        #socials-top {
+          justify-content: flex-start;
+          padding: 1rem 0;
+          a:first-child {
+            padding-left: 0;
           }
         }
       }
@@ -194,18 +222,22 @@
   }
 </style>
 
-<svelte:window bind:outerWidth={windowWidth}/>
+<svelte:window bind:outerWidth={windowWidth} />
 <div id="intro">
   {#if windowWidth > 950}
-    <a id="logo" href="/"><img src="/favicon.svg" alt="CDJ Logo"></a>
+    <a id="logo" href="/"><img src="/favicon.svg" alt="CDJ Logo" /></a>
   {/if}
   <a id="title" href="/"><h1>cornell data journal</h1></a>
   <h2 id="blurb">{blurb}</h2>
   <nav>
     {#if windowWidth <= 950}
       <div id="nav-top">
-        <a id="logo-in" href="/"><img src="/favicon.svg" alt="CDJ Logo"></a>
-        <button class="menu" name="open-nav" on:click={() => opened = !opened} class:opened>
+        <a id="logo-in" href="/"><img src="/favicon.svg" alt="CDJ Logo" /></a>
+        <button
+          class="menu"
+          name="open-nav"
+          on:click={() => (opened = !opened)}
+          class:opened>
           <svg width="60" height="60" viewBox="0 0 100 100">
             <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
             <path class="line line2" d="M 20,50 H 80" />
@@ -215,14 +247,52 @@
       </div>
     {/if}
     {#if opened}
-      <div id="links" transition:slideIfMobile|local>
-        {#each links as [path, name]}
-          <a href={$url(path)} class:active={$isActive(path)}>
-            {name}
-          </a>
-        {/each}
+      <div transition:slideIfMobile|local>
+        <div id="links">
+          {#each links as [path, name]}
+            <a href={$url(path)} class:active={$isActive(path)}> {name} </a>
+          {/each}
+        </div>
+        {#if windowWidth <= 950}
+          <div id="socials-top">
+            <a href="https://www.instagram.com/cornelldatajournal/">
+              <img src="/socials/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/cornelldatajournal/">
+              <img src="/socials/facebook.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-mb391cgl-yqsPnKf6IptzobNInf~y0Q">
+              <img src="/socials/slack.svg" alt="Slack" />
+            </a>
+            <a href="https://www.linkedin.com/company/cornell-data-journal/">
+              <img src="/socials/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://twitter.com/c_datajournal">
+              <img src="/socials/twitter.svg" alt="Twitter" />
+            </a>
+          </div>
+        {/if}
       </div>
     {/if}
   </nav>
+  {#if windowWidth > 950}
+    <div id="socials-top">
+      <a href="https://www.instagram.com/cornelldatajournal/" target="_blank">
+        <img src="/socials/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/cornelldatajournal/" target="_blank">
+        <img src="/socials/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-mb391cgl-yqsPnKf6IptzobNInf~y0Q" target="_blank">
+        <img src="/socials/slack.svg" alt="Slack" />
+      </a>
+      <a href="https://www.linkedin.com/company/cornell-data-journal/" target="_blank">
+        <img src="/socials/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://twitter.com/c_datajournal" target="_blank">
+        <img src="/socials/twitter.svg" alt="Twitter" />
+      </a>
+    </div>
+  {/if}
 </div>
-

@@ -1,7 +1,8 @@
 <!-- routify:options frontmatter= { 
-  "title": "Wings of Change",
-  "description": "The Effects of Climate Change on Migratory Birds",
-  "authors": [ "Annie Fu", "Jennifer Russell", "Daniel Sanderson" ]
+  "title": "The Effects of Climate Change on Migratory Birds",
+  "description": "Meet the Wood Thrush. Smaller than a Robin, the Wood Thrush makes its home throughout the forests of the Eastern United States. Due to climate change, in recent years, the species has been forced to settle further North than ever before.",
+  "authors": [ "Annie Fu", "Jennifer Russell", "Daniel Sanderson" ],
+  "date": "December 18, 2020"
 } -->
 
 <script>
@@ -1150,6 +1151,7 @@
       <p><strong>M</strong>eet the <b>Wood Thrush</b>. Smaller than a Robin, the Wood Thrush makes its home throughout the forests of the Eastern United States.</p>
       <p>While the birds aren’t frequently seen in urbanized areas, their singsong nature would be recognizable to most who’ve spent time hiking or live near a wooded area: </p>
       <p class="credit">
+      <!-- svelte-ignore a11y-media-has-caption -->
         <audio controls>
           <source src={thrushCall} type="audio/mpeg">
           Your browser does not support the audio element.

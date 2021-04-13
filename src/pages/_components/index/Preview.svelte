@@ -15,15 +15,15 @@
       z-index: 1;
       border: 2px solid black;
       background-color: white;
-      max-height: 17rem;
+      height: 17rem;
       transition: border 200ms ease;
       overflow: hidden;
     }
 
     .highlight {
       position: absolute;
-      width: calc(100% - 1rem);
-      height: calc(100% - 1rem);
+      width: calc(100% - 1.2rem);
+      height: 17rem;
       background-color: white;
       border: 2px solid black;
       left: 0.7rem;
@@ -33,14 +33,28 @@
     }
 
     &:hover .highlight {
-      width: calc(100% - 0.7rem);
-      height: calc(100% - 0.7rem);
+      width: calc(100% - 1rem);
+      height: 17.3rem;
       border: 2px solid $yellow;
     }
     &:hover .component {
       border: 2px solid $yellow;
     }
   }
+
+@media only screen and (max-width: 700px) {
+  .preview {
+    .component {
+      height: auto;
+    }
+    .highlight {
+      height: calc(100% - 1.2rem);
+    }
+    &:hover .highlight {
+      height: calc(100% - 1rem);
+    }
+  }
+}
 </style>
 
 <a class="preview" href={slug}>
