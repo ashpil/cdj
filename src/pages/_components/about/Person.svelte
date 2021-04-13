@@ -1,8 +1,6 @@
 <script>
   export let name;
   export let role;
-  export let minor;
-  export let major;
   export let color;
   export let desc;
   export let year;
@@ -12,16 +10,16 @@
   let out = false;
   let hover = false;
 
-  function reverse(t) {
+  function reverse() {
     out = !out;
     hover = false;
   }
-  function start(t) {
+  function start() {
     out = true;
     hover = true;
   }
-  function transitionEnd(t) {
-    if (event.propertyName == 'top') {
+  function transitionEnd(e) {
+    if (e.propertyName == 'top') {
       out = false;
       if (hover) {
         highlight.style.zIndex = '1';
@@ -36,6 +34,7 @@
   .parent {
     position: relative;
     z-index: 2;
+    padding-right: 1.15rem;
     img {
       border: 3px solid black;
       height: 15rem;
@@ -47,7 +46,7 @@
       left: 0;
       transition: top 0.25s, left 0.25s;
     }
-    .highlight {
+    .person-highlight {
       display: flex;
       justify-content: center; /* align horizontal */
       align-items: center; /* align vertical */
@@ -61,8 +60,22 @@
       background-color: white;
       transition: top 0.25s, left 0.25s;
       p {
-        font-size: 18px;
+        font-size: 17px;
         margin: 1.5em;
+        :global {
+          b {
+            text-decoration: underline;
+            text-decoration-color: $yellow;
+            text-decoration-thickness: 2px;
+          }
+          i {
+            text-decoration: underline;
+            text-decoration-color: $steelblue;
+            text-decoration-thickness: 2px;
+            font-style: normal;
+            font-weight: bold;
+          }
+        }
       }
     }
     h3 {
@@ -82,7 +95,7 @@
     }
   }
   .out {
-    .highlight {
+    .person-highlight {
       left: 15% !important;
       top: 15% !important;
     }
@@ -91,29 +104,17 @@
       top: -15%;
     }
   }
-  b {
-    text-decoration: underline;
-    text-decoration-color: $yellow;
-    text-decoration-thickness: 2px;
-  }
-  i {
-    text-decoration: underline;
-    text-decoration-color: $steelblue;
-    text-decoration-thickness: 2px;
-    font-style: normal;
-    font-weight: bold;
-  }
 </style>
 
 <div class="parent">
   <div on:mouseleave={reverse} on:mouseenter={start} class="big" class:out>
-    <img src="/authors/{name.replace(' ', '_')}.png" on:error={e => e.target.src = "/authors/backup.svg"} alt={name} style="background-color: {color}">
-    <div bind:this={highlight} class="highlight" on:transitionend={transitionEnd}>
-      <p>Annie is a <i>Information Science</i> major and <i>English</i> minor. She drinks <b>4 cups of coffee</b> every day!</p>
+    <img src="/authors/high/{name.replace(/ /g, '_')}.png" on:error={e => e.target.src = '/authors/backup.svg'} alt={name} style="background-color: {color}">
+    <div bind:this={highlight} class="person-highlight" on:transitionend={transitionEnd}>
+      <p>{@html desc}</p>
     </div>
   </div>
   <div class="info">
-    <h3>{`${name} '${year}`}</h3>
+    <h3>{`${name} ${year !== undefined ? '`' + year : ''}`}</h3>
     <p>{role}</p>
   </div>
 </div>
