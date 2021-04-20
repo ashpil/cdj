@@ -27,6 +27,7 @@ module.exports = {
     'a11y-media-has-caption': 0,
     'func-names': 0,
     'object-curly-newline': 0,
+    'prefer-template': 0,
   },
   settings: {
     'svelte3/ignore-styles': (t => true),

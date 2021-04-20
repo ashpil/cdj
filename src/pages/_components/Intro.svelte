@@ -71,16 +71,14 @@
         width: 2.1rem;
         padding: 0 0.6rem;
         transition: filter 100ms;
-        filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg)
-          brightness(91%) contrast(90%);
         &:hover {
-          filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg)
-            brightness(130%) contrast(90%);
+          filter: brightness(130%);
         }
       }
       img {
         height: 100%;
         border-radius: 1px;
+        filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(91%) contrast(90%);
       }
     }
     nav {
@@ -284,7 +282,7 @@
       <a href="https://www.facebook.com/cornelldatajournal/" target="_blank">
         <img src="/socials/facebook.svg" alt="Facebook" />
       </a>
-      <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-mb391cgl-yqsPnKf6IptzobNInf~y0Q" target="_blank">
+      <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-p9ehqeea-AmiyvTmpXq~oxXYughkm1A" target="_blank">
         <img src="/socials/slack.svg" alt="Slack" />
       </a>
       <a href="https://www.linkedin.com/company/cornell-data-journal/" target="_blank">
