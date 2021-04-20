@@ -28,11 +28,6 @@
       }
     }
   }
-
-  @media only screen and (max-width: $mobile-cutoff-xs) {
-    main {
-    }
-  }
 </style>
 
 <Header />

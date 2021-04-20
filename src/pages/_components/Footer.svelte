@@ -15,12 +15,12 @@
       width: 3rem;
       padding: 1.5rem;
       transition: filter 100ms;
-      filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(91%) contrast(90%);
       &:hover {
-        filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(130%) contrast(90%);
+        filter: brightness(130%);
       }
       img {
         border-radius: 1px;
+        filter: invert(15%) sepia(48%) saturate(4286%) hue-rotate(231deg) brightness(91%) contrast(90%);
       }
     }
   }
@@ -37,19 +37,19 @@
 
 <footer>
   <div id="socials">
-    <a href="https://www.instagram.com/cornelldatajournal/">
+    <a href="https://www.instagram.com/cornelldatajournal/" target="_blank">
       <img src="/socials/instagram.svg" alt="Instagram">
     </a>
-    <a href="https://www.facebook.com/cornelldatajournal/">
+    <a href="https://www.facebook.com/cornelldatajournal/" target="_blank">
       <img src="/socials/facebook.svg" alt="Facebook">
     </a>
-    <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-mb391cgl-yqsPnKf6IptzobNInf~y0Q">
+    <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-p9ehqeea-AmiyvTmpXq~oxXYughkm1A" target="_blank">
       <img src="/socials/slack.svg" alt="Slack">
     </a>
-    <a href="https://www.linkedin.com/company/cornell-data-journal/">
+    <a href="https://www.linkedin.com/company/cornell-data-journal/" target="_blank">
       <img src="/socials/linkedin.svg" alt="LinkedIn">
     </a>
-    <a href="https://twitter.com/c_datajournal">
+    <a href="https://twitter.com/cu_datajournal" target="_blank">
       <img src="/socials/twitter.svg" alt="Twitter">
     </a>
   </div>

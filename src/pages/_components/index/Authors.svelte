@@ -53,7 +53,7 @@
 <div class="authors">
   {#each authors as author, i}
     <span class="author" style="background-color:{colors[i % authors.length]};">
-      <img src="authors/{author.replace(' ', '_')}.png" on:error={e => e.target.src = 'authors/backup.svg'} alt={author}>
+      <img src="/authors/low/{author.replace(/ /g, '_')}.png" on:error={e => e.target.src = '/authors/backup.svg'} alt={author}>
       <span class="tooltiptext">{author}</span>
     </span>
   {/each}

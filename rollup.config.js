@@ -13,6 +13,7 @@ import { injectManifest } from 'rollup-plugin-workbox'
 import { mdsvex } from "mdsvex";
 import smartAsset from "rollup-plugin-smart-asset";
 import json from '@rollup/plugin-json';
+import replace from 'rollup-plugin-replace';
 
 const { distDir } = getConfig() // use Routify's distDir for SSOT
 const assetsDir = 'assets'
@@ -23,7 +24,6 @@ const production = !process.env.ROLLUP_WATCH;
 // clear previous builds
 removeSync(distDir)
 removeSync(buildDir)
-
 
 const serve = () => ({
     writeBundle: async () => {
@@ -109,6 +109,9 @@ export default {
                 map: { mappings: '' }
             })
         },
+        replace({
+          'process.env.NODE_ENV': `"${production ? 'production' : 'development'}"`,
+        }),
         injectManifest({
             globDirectory: assetsDir,
             globPatterns: ['**/*.{js,css,svg}', '__app.html'],
