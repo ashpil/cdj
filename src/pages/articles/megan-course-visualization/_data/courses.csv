@@ -1,0 +1,52 @@
+key,term,Prefix,Number,Name,dist,credits,,value,Category
+0,Fall 2017,CHEM,2090,Engineering General Chemistry,,4,,1,Engineering Distribution
+1,Fall 2017,ENGRC,1009,Cooperative Workshop Chem 2090,,1,,1,Engineering Distribution
+2,Fall 2017,ENGRG,1050,Engineering Seminar,,1,,1,Engineering Distribution
+3,Fall 2017,CS,1110,Intro Computing Using Python,,4,,1,CS
+4,Fall 2017,Math,1910,Calculus for Engineering,,4,,1,CS distribution
+5,Fall 2017,MEDVL,1101,Aspects of Medieval Culture,,3,,1,Liberal Arts Distribution
+6,Fall 2017,Music,3512,Individual Instruction ,,0.5,,1,Liberal Arts Distribution
+7,Fall 2017,PE,1642,Women's Basic Rock Climbing,,1,Study Abroad ,1,PE
+8,Spring 2018,CS,2800,Discrete Structures,,3,,1,CS
+9,Spring 2018,CS,4998,Team Projects,,3,,1,CS
+10,Spring 2018,ENGRD,2110,Object Oriented Programming and Data Structures,,3,,1,CS
+11,Spring 2018,Math,1920,Multivariate Calculus for Engineers,,4,,1,CS distribution
+12,Spring 2018,Music,3512,Individual Instruction ,,0.5,,1,Liberal Arts Distribution
+13,Spring 2018,Port,2010,Intermediate Brazilian Portuguese,,4,,1,Language
+14,Fall 2018 ,CS,3110,Data Structures and Functional Programming,,4,,1,CS
+15,Fall 2018 ,CS,4998,Team Projects,,3,,1,CS
+16,Fall 2018 ,ENGL,3080,Icelandic Family Sagas,,4,,1,English
+17,Fall 2018 ,ITAL,1201,Italian 1,,4,,1,Language
+18,Fall 2018 ,MATH,2940,Linear Algeabra for Engineers,,4,,1,CS distribution
+19,Spring 2018,CS,4300,Language and Information,,3,,1,CS
+20,Spring 2018,CS ,4820,Intro to Analysis of Algorithms,,4,,1,CS
+21,Spring 2018,CS,4998,Team Projects,,3,,1,CS
+22,Spring 2018,ENGL,3830,Narrative Writing,,4,,1,English
+23,Spring 2018,ITAL,1202,Italian 2,,4,,1,Language
+24,Fall 2019,ENGL,2xxx,Scottish Literature  ,,4,TRUE,1,English
+25,Fall 2019,HIST,2xxx,Medieval Worlds: A Journey Through the Middle Ages,,4,TRUE,1,Arts distribution
+26,Fall 2019,CS,2xxx,Human-Computer Interaction,,4,TRUE,1,CS
+27,Fall 2019,CS,2xxx,Natural Computing,,4,TRUE,1,CS
+28,Spring 2020,CS,3152,Intro to Computer Game Architecture,,4,,1,CS
+29,Spring 2020,CS,3410,Systems Programming,,4,,1,CS
+30,Spring 2020,ENGL,2080,Shakespeare & 20th & 21st century film,,4,,1,English
+31,Spring 2020,ENGL,3725,Femininity as Masquerade,,4,,1,English
+32,Spring 2020,ENGRC,3152,Communication Game Development,,1,,1,CS
+33,Spring 2020,LATA,2800,Perspectives on Brazil,,4,,1,Arts distribution
+34,Summer 2020,ANTHR,1300,Human Evolution,,3,,1,Arts distribution
+35,Fall 2020,BTRY,3080,Probability Models & Inference,,4,,1,CS
+36,Fall 2020,CS,4320,Intro to Database Systems,,3,,1,CS
+37,Fall 2020,CS,4701,Prac in AI ,,2,,1,CS
+38,Fall 2020,ENGL,3130,Medieval Women Writers,,4,,1,English
+39,Fall 2020,ENGL,4801,Advanced Narrative Writing,,4,,1,English
+40,Fall 2020,ENGL,4910,Hondors Seminar 1: Irish Literature,,4,,1,English
+41,Fall 2020,PE,1615,Introduction to Circus Arts,,1,,1,PE
+42,Winter 2021,GOVT,3686,What Makes us Human,,3,,1,Arts distribution
+43,Spring 2021,CS,4410,Operating Systems,,3,,1,CS
+44,Spring 2021,CS,4852,Networks II: Market Design,,3,,1,CS
+45,Spring 2021,ENGL ,3720,Medieval and Renaissance Drama,,4,,1,English
+46,Spring 2021,ENGL,3850,Poetry Writing,,4,,1,English
+47,Spring 2021,LATA,3100,Advanced Portugese 1,,4,,1,Language
+48,Spring 2021,PE,1657,Tree Climbing,,1,,1,PE
+49,Spring 2021,PE,1690,Cross Country Skiing,,1,,1,PE
+50,Spring 2021,PE,1702,Outdoor Yoga,,1,,1,PE
