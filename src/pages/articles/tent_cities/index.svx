@@ -6,6 +6,6 @@ date: May 14, 2021
 ---
 
 <script>
-  window.location.replace('http://odyssee.community/')
+  window.location.replace('https://annieefu.github.io/nc-tentcities/')
 </script>
 
