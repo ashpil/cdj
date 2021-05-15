@@ -1,0 +1,11 @@
+---
+title: Tent Cities
+description: In Charlotte, North Carolina, the chasm between the rich and the poor is so wide, the city has historically been coined a “tale of two cities:” one of prosperity and the other of poverty. 
+authors: [ Annie Fu, Dana Gong ]
+date: May 14, 2021
+---
+
+<script>
+  window.location.replace('http://odyssee.community/')
+</script>
+

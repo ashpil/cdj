@@ -16,7 +16,11 @@
         slug: post.path,
         component: post.children.find(child => child.title === 'Preview_').component,
         ...post.__file.children.find(child => child.isIndex).meta.frontmatter,
-      }));
+      })).sort((a, b) => {
+        let date_a = new Date(a.date);
+        let date_b = new Date(b.date);
+        return date_a < date_b;
+      });
 
     let componentsReady = 0;
     setContext('ready', () => {
