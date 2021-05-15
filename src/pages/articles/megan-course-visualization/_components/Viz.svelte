@@ -56,8 +56,8 @@
             .style("font-size", "12px")
             .style("visibility", "visible")
             .style("max-width", "150px")
-            .style("top", function() { return event.pageY - topOffset + "px"; })
-            .style("left", function() { return event.pageX - leftOffset +"px"; });
+            .style("top", () => event.pageY - topOffset + "px")
+            .style("left", () => event.pageX - leftOffset +"px");
         }
 
         function hideTooltip(tooltip, className) {
