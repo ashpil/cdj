@@ -35,7 +35,8 @@
     width: 900px;
     margin: 0 auto;
     margin-bottom: 50px;
-    max-width: 100%;
+    padding: 0 0.5rem;
+    max-width: calc(100% - 1rem);
     color: #505050;
     font-family: Montserrat;
     font-weight: bold;

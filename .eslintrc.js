@@ -28,6 +28,9 @@ module.exports = {
     'func-names': 0,
     'object-curly-newline': 0,
     'prefer-template': 0,
+    'no-use-before-define': 0,
+    'no-unused-vars': 0,
+    'no-else-return': 0,
   },
   settings: {
     'svelte3/ignore-styles': (t => true),
