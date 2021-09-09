@@ -4,7 +4,7 @@
 
 <div id="banner">
     <h6>
-        Hey, you! 👋 Our next info session is <b>Sept. 8, 5-6pm @ Gates G01</b>. Be there or be square!
+        Hey, you! 👋 Our next info session is <b>Sept. 13, 5-6pm <a href="https://bit.ly/cdj-info">on Zoom</a></b>. You can also find during Club Fest, <b>Sept. 11, 11-1pm @ the Arts Quad</b>.
     </h6>
 </div>
 
@@ -25,6 +25,9 @@
       b {
         color: $yellow;
         font-weight: 1000;
+      }
+      a {
+          color: $steelblue;
       }
     }
   }
