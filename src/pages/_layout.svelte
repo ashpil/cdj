@@ -4,7 +4,7 @@
 
 <div id="banner">
     <h6>
-        Hey, you! 👋 Our next info session is <b>Sept. 13, 5-6pm <a href="https://bit.ly/cdj-info">on Zoom</a></b>. You can also find us at Club Fest, <b>Sept. 11, 11-1pm on the Arts Quad</b>.
+        Hey, you! 👋 Our next info session is <b>Sept. 13, 5-6pm <a href="https://bit.ly/cdj-info">on Zoom</a></b>. You can also find us at Club Fest, <b>Sept. 12, 11-1pm on the Arts Quad</b>.
     </h6>
 </div>
 
