@@ -4,7 +4,7 @@
 
 <div id="banner">
     <h6>
-        Hey, you! 👋 Our next info session is <b>Sept. 13, 5-6pm <a href="https://bit.ly/cdj-info">on Zoom</a></b>. You can also find us at Club Fest, <b>Sept. 12, 11-1pm on the Arts Quad</b>.
+        Hey, you! 👋 Our next info session is <b>Sept. 13, 5-6pm <a href="https://bit.ly/cdj-info">on Zoom</a></b>. In the meantime, join our <a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-ugj8kfd0-TvH0uYbPasGJNzJ7s4DVQg">slack workspace</a> to get updates on our first g-body and other exciting club details!
     </h6>
 </div>
 
