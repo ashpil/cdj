@@ -4,7 +4,7 @@
 
 <div id="banner">
     <h6>
-        Hey, you! 👋 Our next info session is <b>Sept. 13, 5-6pm <a href="https://bit.ly/cdj-info">on Zoom</a></b>. In the meantime, join our <b><a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-vrepfq9g-7KPtzv2myUAsTU8YG5mPNg">slack workspace</a></b> to get updates on our first g-body and other exciting club details!
+        Hey, you! 👋 Join our <b><a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-vrepfq9g-7KPtzv2myUAsTU8YG5mPNg">slack workspace</a></b> to get updates on our first g-body and other exciting club details!
     </h6>
 </div>
 
