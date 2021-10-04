@@ -9,13 +9,11 @@
     metatags.description = blurb;
 
     const team = [
-      { name: 'Annie Fu', year: 21, role: 'Co-Editor in Chief', desc: 'Annie is an <i>Information Science</i> major and <i>English</i> minor. She logs movies she watches, and of the <b>322</b> she\'s logged so far, her average rating is <b>3.44 stars</b>.' },
-      { name: 'Dana Gong', year: 22, role: 'Co-Editor in Chief', desc: 'Dana is an <i>Information Science</i> major and <i>PAM</i> minor. She eats oatmeal <b>364/365</b> days of the year.' },
-      { name: 'Melanie Walsh', role: 'Faculty Mentor', desc: 'Melanie is a <i>Postdoctoral Associate in Information Science</i>. She has visited <b>9 National Parks</b> and encountered a running total of <b>0 grizzly bears</b>.' },
-      { name: 'Megan Rochlin', year: 21, role: 'Deputy Editor', desc: 'Megan is majoring in <i>English</i> and <i>Computer Science</i> and minoring in <i>Creative Writing</i>. Since 2012, she has written <b>8 (bad) novels</b> with a total of <b>377,097 words</b>.' },
+      { name: 'Dana Gong', year: 22, role: 'Editor in Chief', desc: 'Dana is an <i>Information Science</i> major and <i>PAM</i> minor. She eats oatmeal <b>364/365</b> days of the year.' },
+      { name: 'Medha Bulumulla', year: 23, role: 'Managing Editor', desc: 'Medha is a <i>Biometry and Statistics</i> major with a minor in <i>Information Science</i>. She has <b>16 journals</b> for ideas, poetry, drawing, painting, clothing design, and scrapbooking.' },
       { name: 'Liying Wang', year: 22, role: 'Marketing/Graphics Editor', desc: 'Liying is an <i>Information Science</i> major, minoring in <i>Visual Studies</i> and <i>Business</i>. She has lived in <b>Japan for 14%</b> of her life, <b>Canada for 10%</b>, and the <b>US for 76%</b>.' },
-      { name: 'Andrei Shpilenok', year: 23, role: 'Web Developer', desc: 'Andrei is a <i>Computer Science</i> major. He owns <b>3 mechanical keyboards</b>.' },
-      { name: 'Yun Mi Koh', year: 21, role: 'Marketing Lead', desc: 'Yun Mi is a <i>DEA</i> major with a minor in <i>UX</i>.' },
+      { name: 'Andrei Shpilenok', year: 23, role: 'Technical Director', desc: 'Andrei is a <i>Computer Science</i> major. He owns <b>3 mechanical keyboards</b>.' },
+      { name: 'Joyce Tsai', year: 22, role: 'Web Developer', desc: 'Joyce is an <i>Information Science</i> major. In her last 15 games of Valorant, she has a <b>loss rate of 53%</b>.'}
     ];
 
     const colors = ['#A4BCD5', '#2C358B', '#F8C82D', '#642D89'];
