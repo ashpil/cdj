@@ -33,7 +33,7 @@
 
 <div id="banner">
     <h6>
-        Hey, you! 👋 Join our <b><a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-vrepfq9g-7KPtzv2myUAsTU8YG5mPNg">slack workspace</a></b> to get updates on exciting club details! Our brainstorming g-body is <b>Oct. 6, 5-6pm in Mallot 228</b>.
+        Hey, you! 👋 Join our <b><a href="https://join.slack.com/t/cornell-data-journal/shared_invite/zt-xkae7bn4-57myrKPjhZMHO8Bj4WTDUw">slack workspace</a></b> to get updates on exciting club details!
     </h6>
 </div>
 <main>
